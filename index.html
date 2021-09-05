@@ -7,22 +7,70 @@
     <title>Isaac Kim</title>
     
     <style type="text/css">
-        /*
-        전체 분위기 컬러 #302C4D
-        */
-
+        /* 전체 분위기 컬러 #302C4D */
         html,body{ margin:0; padding:0; width:100%; height:100%;}
         .box {  width:100%; height:100%; position:relative; color:#ffffff; font-size:24pt; }
         .box:first-of-type p { opacity:1;}
         .box p {width:50%; height:50%; background:rgba(0,0,0,.3); position:absolute; font-size:200px; left:50%; top:50%; transform:translate(-50%, -50%); margin:0; opacity:0; text-align:center; }
         .move p { animation:fade_in .1s  1.0s forwards;  }
-        
+        h4, h5, h6 {margin: 0; padding: 0; font-weight: 100;}
+
         @keyframes fade_in {
             0% { opacity:0; left:40%;}
             100% { opacity:1; left:50%;} 
         }
         
         /* 첫 번째 박스 */
+        div.box:nth-child(1) #title {
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-style: italic;
+            
+            padding-top: 1%;
+            /*border-bottom: 1px solid white;*/
+
+            position: absolute;
+
+            width: 55%;
+            margin-left: 5%;
+
+            animation-name: fadeInHeader;
+            animation-duration: 2s;
+        }
+        div.box:nth-child(1) #title h4,
+        div.box:nth-child(1) #title h6 {
+            position: relative;
+        }
+        div.box:nth-child(1) #title h4 {
+            display: flex;
+            border-bottom: 1px solid white;
+        }
+        div.box:nth-child(1) #title h6 {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        div.box:nth-child(1) #title #email{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: small;
+        }
+        @keyframes fadeInHeader {
+            0% { opacity:0; right: -100%;}
+            100% { opacity:1; right : 40%} 
+        }
+        div.box:nth-child(1) .subTitle {
+            font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-size : medium;
+            
+            display: flex;
+            position: absolute;
+            top: 6%;
+
+            animation-name: fadeInSubTitle;
+            animation-duration: 5s;
+        }
+        @keyframes fadeInSubTitle {
+            0% { opacity:0; }
+            100% { opacity:1; } 
+        }
         div.box:nth-child(1) .bottomLine {
             display: flex;
             justify-content: flex-end; /* 오른쪽으로 부착 */
@@ -30,17 +78,16 @@
             background-color: white;
             
             width: 100%;   /* 너비 */
-            height : 11%;  /* 높이 */
+            height : 12%;  /* 높이 */
 
-            position:relative;
+            position:absolute;
 
-            top : 86%;
+            top : 80%;
             
-            animation-name: fade_in1;
-            animation-duration: 0.8s;
+            animation-name: fadeInbottomLine;
+            animation-duration: 1.5s;
         }
-
-        @keyframes fade_in1 {
+        @keyframes fadeInbottomLine {
             0% { opacity:0; left:-100%;}
             100% { opacity:1; left:0%;} 
         }
@@ -172,9 +219,17 @@
 </head>
 <body>
     <div class="box" style="background-color:#302C4D;">
-        <p>1</p>
-
-        <div class="bottomLine"></div>
+        <div id="title">
+            <h4 >isaac</h4>
+            <h6 class="subTitle">
+                <span id="phoneNumber">+82 10 7577 7263</span>
+            </h6>
+            <h6 class="subTitle">
+                <span id="email">isaac7263@naver.com</span>
+            </h6>
+        </div>
+        
+        <div class="bottomLine" style="color:black"></div>
     </div>
 
     <div class="box" style="background-color:orange;"><p>2</p></div>
