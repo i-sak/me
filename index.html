@@ -86,7 +86,12 @@
                     if ($(elmSelecter).next() != undefined) {
                         try{
                             moveTop = $(elmSelecter).next().offset().top;
+                            
                             $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
+                            
+                            boxIndex = $(this).next().index();
+                            //console.log(boxIndex);
+                            boxLoad(boxIndex, boxCount);
                         }catch(e){}
                     }
                 // 마우스휠을 아래에서 위로
@@ -94,6 +99,9 @@
                     if ($(elmSelecter).prev() != undefined) {
                         try{
                             moveTop = $(elmSelecter).prev().offset().top;
+                            boxIndex = $(this).prev().index();
+                            //console.log(boxIndex);
+                            boxLoad(boxIndex, boxCount);
                         }catch(e){}
                     }
                 }
@@ -135,7 +143,7 @@
                             moveTop = $(elmSelecter).next().offset().top;
                             $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
                             boxIndex = $(this).next().index();
-                            console.log(boxIndex);
+                            //console.log(boxIndex);
                             boxLoad(boxIndex, boxCount);
                         }catch(e){}
                     }
@@ -144,7 +152,7 @@
                         try{
                             moveTop = $(elmSelecter).prev().offset().top;
                             boxIndex = $(this).prev().index();
-                            console.log(boxIndex);
+                            //console.log(boxIndex);
                             boxLoad(boxIndex, boxCount);
                         }catch(e){}
                     }
