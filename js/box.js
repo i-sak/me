@@ -17,10 +17,13 @@ function boxLoad(index, max) {
         title.setAttribute("id","title");
         
         // subTitle
-        var subTitle = box.querySelector(".subTitle");
-        subTitle.removeAttribute("class");
-        void subTitle.offsetWidth; // 브라우저에서 강제 랜더링 시키기
-        subTitle.setAttribute("class", "subTitle");
+        var subTitle = box.querySelectorAll(".subTitle");
+        subTitle[0].removeAttribute("class");
+        subTitle[1].removeAttribute("class");
+        void subTitle[0].offsetWidth; // 브라우저에서 강제 랜더링 시키기
+        void subTitle[1].offsetWidth; // 브라우저에서 강제 랜더링 시키기
+        subTitle[0].setAttribute("class", "subTitle");
+        subTitle[1].setAttribute("class", "subTitle");
         
         // 바닥 라인
         var bottomLine = box.querySelector(".bottomLine");
