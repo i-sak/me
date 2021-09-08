@@ -1,7 +1,7 @@
 /* 전체 분위기 컬러 #302C4D */
+
 html,body{ margin:0; padding:0; width:100%; height:100%;}
 body{overflow-x:hidden;} /*가로스크롤바 없애기*/
-a {text-decoration: none;}
 .box {  width:100%; height:100%; position:relative; color:#ffffff; font-size:24pt; }
 .box:first-of-type p { opacity:1;}
 .box p {width:50%; height:50%; background:rgba(0,0,0,.3); position:absolute; font-size:200px; left:50%; top:50%; transform:translate(-50%, -50%); margin:0; opacity:0; text-align:center; }
@@ -12,6 +12,8 @@ h4, h5, h6 {margin: 0; padding: 0; font-weight: 100;}
     0% { opacity:0; left:40%;}
     100% { opacity:1; left:50%;} 
 }
+/* 3 line bar Menu icon */
+div#fixedMenu {display: none; position: fixed; }
 
 /* 첫 번째 박스 */
 div.box:nth-child(1) #title {
@@ -30,6 +32,12 @@ div.box:nth-child(1) #title {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
+div.box:nth-child(1) #title h4 a,
+div.box:nth-child(1) #title h4 a:visited,
+div.box:nth-child(1) #title h4 a:link,
+div.box:nth-child(1) #title h4 a:active
+{text-decoration:none; text-decoration-color: white; color : white;}
+
 div.box:nth-child(1) #title h4,
 div.box:nth-child(1) #title h6 {
     position: relative;
@@ -50,6 +58,7 @@ div.box:nth-child(1) #title #email{
     0% { opacity:0; right: -100%;}
     100% { opacity:1; right : 40%} 
 }
+
 div.box:nth-child(1) .subTitle {
     font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size : medium;
@@ -58,15 +67,18 @@ div.box:nth-child(1) .subTitle {
     position: absolute;
     top: 6%;
 }
-div.box:nth-child(1) section {
+div.box:nth-child(1) section#section1 {
     position: absolute;
     right:10%;
+}
+div.box:nth-child(1) section#section1 span.emphasis {
+    color : rgb(219, 219, 34);
 }
 /*div.box:nth-child(1) section span.cYello {color:rgb(230, 230, 10);}*/
 
 div.box:nth-child(1) section#section1 {
     animation-name: fadeInMainText;
-    animation-duration: 2s;
+    animation-duration: 2.5s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -131,3 +143,59 @@ div.box:nth-child(1) .bottomLine a:hover {
     50%{ height: 55%;}
     100% { opacity:1; height: 50%;} 
 }
+div.box:nth-child(1) span.circle {
+    display: inline-block;
+    position: absolute;
+    background-color: black;
+    top: 50%;
+    right: 50%;
+    width: 100px;
+    height : 100px;
+    opacity: 0.4;
+    z-index: -1;
+    border-radius: 50%;
+}
+div.box:nth-child(1) span.c1 { 
+    background-color: teal;
+    animation-name: movingC1;
+    animation-duration: 6s;
+    animation-delay: 1s;
+    animation-timing-function: ease;
+    animation-direction: unset;
+    animation-iteration-count: infinite;
+}
+div.box:nth-child(1) span.c2 {
+    background-color: midnightblue;
+    animation: movingC1 6s ease 2s infinite;
+}
+div.box:nth-child(1) span.c3 {
+    background-color: black;
+    animation: movingC1 6s ease 3s infinite;
+}
+div.box:nth-child(1) span.c4 {
+    background-color: midnightblue;
+    animation: movingC1 6s ease 4s infinite;
+}
+div.box:nth-child(1) span.c5 {
+    background-color: black;
+    animation: movingC1 6s ease 5s infinite;
+}
+@keyframes movingC1 {
+    0% {top:50%}
+    25% {top:10%; right:25%;}
+    50% {top:50%; right: 0%;}
+    75% {top:90%; right: 25%;}
+    100% {top:50%; right:50%;}
+}
+
+@media screen and (max-width: 768px) {
+/* 모바일에 사용될 스타일 시트를 작성합니다. */    
+    div.box:nth-child(1) section#section1 {
+        font-size: 70%;
+    }
+
+    div#fixedMenu {display: flex; top:1%; right: 3%;}    
+    
+}
+
+

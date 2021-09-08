@@ -10,7 +10,8 @@ function initPos() {
     pos.x = 0;
     pos.y = 0;
 }
-window.onload = function () {
+// window.onload = function () { }
+$(document).ready(function() {
     elm = ".box";
     boxCount = $(elm).length;
     
@@ -115,4 +116,4 @@ window.onload = function () {
         }); // - end - touchend
 
     });
-}
+});
