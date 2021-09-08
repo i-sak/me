@@ -194,7 +194,7 @@ div.box:nth-child(1) span.c5 {
         font-size: 70%;
     }
 
-    div#fixedMenu {display: flex; top:1%; right: 3%;}    
+    div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}    
     
 }
 
