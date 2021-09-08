@@ -10,12 +10,13 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
-    <script type="text/javascript" src="./js/boxLoad.js"></script>
     <script type="text/javascript" src="./js/screenTransform.js"></script>
+    <script type="text/javascript" src="./js/boxLoad.js"></script>
+    <script type="text/javascript" src="./js/menu.js"></script>
 
 </head>
 <body>
-    <div class="box" style="background-color:#302C4D;">
+    <div class="box">
         <div id="title">
             <h4><a href="https://i-sak.github.io/me/">isaac</a></h4>
             <h6 class="subTitle">
@@ -91,16 +92,30 @@
         </div>
     </div>
 
-    <div class="box" style="background-color:orange;">2</div>
-    <div class="box" style="background-color:yellow;">3</div>
+    <div class="box" >2</div>
+    <div class="box" >3</div>
     <!--
     <div class="box" style="background-color:green;"><p>4</p></div>
     <div class="box" style="background-color:blue;"><p>5</p></div>
     <div class="box" style="background-color:indigo;"><p>6</p></div>
     <div class="box" style="background-color:violet;"><p>7</p></div>
     -->
+
     <div id="fixedMenu">
-        <a href="javascript:alert(1)"><svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></a>
+        <a href="javascript:clickMenuIcon();"><svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></a>
     </div>
+    
+    <nav id="navSpace">
+        <header>
+            <a class="close" href="javascript:clickMenuX();">X</a>
+        </header>
+        <section>
+            <a></a>
+        </section>
+        <footer>
+            <a></a>
+        </footer>
+    </nav>
+
 </body>
 </html>

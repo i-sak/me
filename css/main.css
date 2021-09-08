@@ -1,4 +1,7 @@
 /* 전체 분위기 컬러 #302C4D */
+:root {
+    --background-color : #302C4D
+}
 
 html,body{ margin:0; padding:0; width:100%; height:100%;}
 body{overflow-x:hidden;} /*가로스크롤바 없애기*/
@@ -8,12 +11,44 @@ body{overflow-x:hidden;} /*가로스크롤바 없애기*/
 .move p { animation:fade_in .1s  1.0s forwards;  }
 h4, h5, h6 {margin: 0; padding: 0; font-weight: 100;}
 
+div.box:nth-child(1),
+div.box:nth-child(3) {
+    background-color:var(--background-color);
+}
+
 @keyframes fade_in {
     0% { opacity:0; left:40%;}
     100% { opacity:1; left:50%;} 
 }
-/* 3 line bar Menu icon */
+/* 3 line bar Menu icon ----- nav menu ----- */
 div#fixedMenu {display: none; position: fixed; }
+nav#navSpace {display: hidden; position: fixed; color:white;}
+nav.onNavSpace {
+    position : fixed;
+    z-index: 2;
+    height: 100%;
+    top:0%;
+    right:0%;
+
+    opacity: 0.5;
+    background-color: rgb(3, 6, 22);
+    
+    animation: toLeftNavSpace 0.7s ease forwards;
+    /*
+    animation: name duration timing-function delay iteration-count direction fill-mode;
+    */
+}
+@keyframes toLeftNavSpace {
+    0% {width: 0%}
+    100% { width: 50%}
+}
+
+nav#navSpace > header > a {
+    display: flex;
+    text-decoration: none;
+    color:white;
+}
+
 
 /* 첫 번째 박스 */
 div.box:nth-child(1) #title {
@@ -193,9 +228,8 @@ div.box:nth-child(1) span.c5 {
     div.box:nth-child(1) section#section1 {
         font-size: 70%;
     }
-
-    div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}    
-    
+    div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
 }
-
-
+@media screen and (min-width: 768px) {
+    div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
+}
