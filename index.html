@@ -6,249 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaac Kim</title>
     
-    <style type="text/css">
-        /* 전체 분위기 컬러 #302C4D */
-        html,body{ margin:0; padding:0; width:100%; height:100%;}
-        body{overflow-x:hidden;} /*가로스크롤바 없애기*/
-        .box {  width:100%; height:100%; position:relative; color:#ffffff; font-size:24pt; }
-        .box:first-of-type p { opacity:1;}
-        .box p {width:50%; height:50%; background:rgba(0,0,0,.3); position:absolute; font-size:200px; left:50%; top:50%; transform:translate(-50%, -50%); margin:0; opacity:0; text-align:center; }
-        .move p { animation:fade_in .1s  1.0s forwards;  }
-        h4, h5, h6 {margin: 0; padding: 0; font-weight: 100;}
-
-        @keyframes fade_in {
-            0% { opacity:0; left:40%;}
-            100% { opacity:1; left:50%;} 
-        }
-        
-        /* 첫 번째 박스 */
-        div.box:nth-child(1) #title {
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            font-style: italic;
-            
-            padding-top: 1%;
-            /*border-bottom: 1px solid white;*/
-
-            position: absolute;
-
-            width: 55%;
-            
-            animation-name: fadeInHeader;
-            animation-duration: 2s;
-            animation-timing-function: ease-in-out;
-            animation-fill-mode: forwards;
-        }
-        div.box:nth-child(1) #title h4,
-        div.box:nth-child(1) #title h6 {
-            position: relative;
-        }
-        div.box:nth-child(1) #title h4 {
-            display: flex;
-            border-bottom: 1px solid white;
-        }
-        div.box:nth-child(1) #title h6 {
-            display: flex;
-            flex-direction: row-reverse;
-        }
-        div.box:nth-child(1) #title #email{
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: small;
-        }
-        @keyframes fadeInHeader {
-            0% { opacity:0; right: -100%;}
-            100% { opacity:1; right : 40%} 
-        }
-        div.box:nth-child(1) .subTitle {
-            font-family : 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-            font-size : medium;
-            
-            display: flex;
-            position: absolute;
-            top: 6%;
-        }
-
-        div.box:nth-child(1) .bottomLine {
-            background-color: white;
-
-            display: flex;
-
-            align-items: center;        /* 가운데 정렬 (방향 : 상하) */
-            justify-content: flex-end;  /* 오른쪽으로 부착 (방향 : 좌우) */
-
-            width: 100%;   /* 너비 */
-            height : 11%;  /* 높이 */
-
-            position:absolute;
-
-            top : 80%;
-            
-            animation-name: fadeInbottomLine;
-            animation-duration: 1.5s;
-        }
-        @keyframes fadeInbottomLine {
-            0% { opacity:0; left:-100%;}
-            100% { opacity:1; left:0%;} 
-        }
-        div.box:nth-child(1) .bottomLine a {
-            margin-top: 25%;
-            margin-bottom: 25%;
-            height: 50%;
-            
-            margin-right: 1%;
-            display: flex;
-            
-            align-items: center; /* 상하 */
-        }
-        div.box:nth-child(1) .bottomLine a img,
-        div.box:nth-child(1) .bottomLine a svg {
-            position: relative;
-            height: 80%;
-            
-            /*margin-right: 2%;*/
-            
-            animation-name: fadeInLogo;
-            animation-duration: 2s;
-            animation-fill-mode: forwards;
-        }
-        @keyframes fadeInLogo {
-            0% { opacity:0; }
-            100% { opacity:0.6; } 
-        }
-        div.box:nth-child(1) .bottomLine a:hover,
-        div.box:nth-child(1) .bottomLine a:hover {
-            animation-name: fadeInLogo2;
-            animation-duration: 1s;
-            animation-fill-mode: forwards;
-        }
-        @keyframes fadeInLogo2 {
-            0% { opacity:0.6; }
-            100% { opacity:1; } 
-        }
-    </style>
-    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script>-->
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
 
     <!-- jQuery CDN -->
+    <!-- <script type="text/javascript" src="http://code.jquery.com/jquery-1.12.4.min.js"></script> -->
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <script src="./js/box.js"></script>
-    <script type="text/javascript">
-    var pos = {
-        x : 0,
-        y : 0,
-    }
-    var elm;
-    var boxIndex;
-    var boxCount; // 0 or Max
+    
+    <script type="text/javascript" src="./js/boxLoad.js"></script>
+    <script type="text/javascript" src="./js/screenTransform.js"></script>
 
-    function initPos() {
-        pos.x = 0;
-        pos.y = 0;
-    }
-    window.onload = function () {
-        elm = ".box";
-        boxCount = $(elm).length;
-        
-        $(elm).each(function (index) {
-            // 개별적으로 Wheel 이벤트 적용
-            $(this).on("mousewheel DOMMouseScroll", function (e) {
-                e.preventDefault();
-                var delta = 0;
-                if (!event) event = window.event;
-                if (event.wheelDelta) {
-                    delta = event.wheelDelta / 120;
-                    if (window.opera) delta = -delta;
-                } 
-                else if (event.detail)
-                    delta = -event.detail / 3;
-                var moveTop = $(window).scrollTop();
-                var elmSelecter = $(elm).eq(index);
-                // 마우스휠을 위에서 아래로
-                if (delta < 0) {
-                    if ($(elmSelecter).next() != undefined) {
-                        try{
-                            moveTop = $(elmSelecter).next().offset().top;
-                            
-                            $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
-                            
-                            boxIndex = $(this).next().index();
-                            //console.log(boxIndex);
-                            boxLoad(boxIndex, boxCount);
-                        }catch(e){}
-                    }
-                // 마우스휠을 아래에서 위로
-                } else {
-                    if ($(elmSelecter).prev() != undefined) {
-                        try{
-                            moveTop = $(elmSelecter).prev().offset().top;
-                            boxIndex = $(this).prev().index();
-                            //console.log(boxIndex);
-                            boxLoad(boxIndex, boxCount);
-                        }catch(e){}
-                    }
-                }
-
-                // 화면 이동 0.8초(800)
-                $("html,body").stop().animate({
-                    scrollTop: moveTop + 'px'
-                }, {
-                    duration: 300, complete: function () {
-                    }
-                });
-            }); // - end - mousewheel DOMMouseScroll
-
-            $(this).on("touchstart", function(e){
-                //e.preventDefault();
-                initPos();
-                pos.x = e.touches[0].clientX;
-                pos.y = e.touches[0].clientY;
-                //console.log("s "+pos.x, pos.y);
-            }); // - end - touchstart
-            $(this).on("touchend", function(e){
-                var sx = pos.x;
-                var sy = pos.y;
-                var ex = e.changedTouches[0].clientX;
-                var ey = e.changedTouches[0].clientY;
-                var perpendicular = sy - ey
-                // 수평 이동
-                if ( Math.abs(sx - ex) > Math.abs(perpendicular) ) return;
-                // 
-                if (Math.abs(perpendicular) <= 20 ) return;
-                
-
-                var moveTop = $(window).scrollTop();
-                var elmSelecter = $(".box").eq(index);
-                // 양수 아래 페이지, 음수 위 페이지
-                if(perpendicular > 0) { // 아래 페이지
-                    if ($(elmSelecter).next() != undefined) {
-                        try{
-                            moveTop = $(elmSelecter).next().offset().top;
-                            $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
-                            boxIndex = $(this).next().index();
-                            //console.log(boxIndex);
-                            boxLoad(boxIndex, boxCount);
-                        }catch(e){}
-                    }
-                } else { // 위 페이지
-                    if ($(elmSelecter).prev() != undefined) {
-                        try{
-                            moveTop = $(elmSelecter).prev().offset().top;
-                            boxIndex = $(this).prev().index();
-                            //console.log(boxIndex);
-                            boxLoad(boxIndex, boxCount);
-                        }catch(e){}
-                    }
-                }
-
-                // 화면 이동 0.8초(800)
-                $("html,body").stop().animate({
-                    scrollTop: moveTop + 'px'
-                }, {
-                    duration: 300, complete: function () {}
-                });
-            }); // - end - touchend
-
-        });
-    }
-    </script>
 </head>
 <body>
     <div class="box" style="background-color:#302C4D;">
@@ -262,6 +28,13 @@
             </h6>
         </div>
         
+        <section id="section1">
+
+            <h3>I'm <span class="cYello">Isaac</span> Kim</h3>
+            <h4>Server Developer</h4>
+
+        </section>
+
         <div class="bottomLine" style="color:black">
             
             <a href="https://lifere.tistory.com/">
@@ -285,20 +58,19 @@
                 title="Naver">
             </a>
             
+            <a href="https://www.instagram.com/isaac_kiss/">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <title>Instagram</title>
+                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                </svg>
+            </a>
+
             <a href="https://www.facebook.com/profile.php?id=100003562823035">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" >
                 <title>Facebook</title>
                 <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm3 8h-1.35c-.538 0-.65.221-.65.778v1.222h2l-.209 2h-1.791v7h-3v-7h-2v-2h2v-2.308c0-1.769.931-2.692 3.029-2.692h1.971v3z"/>
             </svg>
             </a>
-            
-            <a href="https://www.instagram.com/isaac_kiss/">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-                <title>Instagram</title>
-                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-            </svg>
-            </a>
-            
             
             <a href="https://www.youtube.com/channel/UCpnu38d9yOk8rXhVb_Dc_5g">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

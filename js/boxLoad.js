@@ -9,18 +9,20 @@ function boxLoad(index, max) {
         index = 0;
         
         // console.log("첫 번째 box load")
-
         // Title
         var title = box.querySelector("#title");
         title.removeAttribute("id");
         void title.clientWidth;
         title.setAttribute("id","title");
         
+        var section1 = box.querySelector("section#section1");
+        section1.removeAttribute("id");
+        void section1.clientWidth;
+        section1.setAttribute("id", "section1");
         // 바닥 라인
         var bottomLine = box.querySelector(".bottomLine");
         bottomLine.removeAttribute("class");
         void bottomLine.offsetWidth; // 브라우저에서 강제 랜더링 시키기
         bottomLine.setAttribute("class", "bottomLine");
-
     }
 }
