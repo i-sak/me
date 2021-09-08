@@ -1,6 +1,7 @@
 /* 전체 분위기 컬러 #302C4D */
 html,body{ margin:0; padding:0; width:100%; height:100%;}
 body{overflow-x:hidden;} /*가로스크롤바 없애기*/
+a {text-decoration: none;}
 .box {  width:100%; height:100%; position:relative; color:#ffffff; font-size:24pt; }
 .box:first-of-type p { opacity:1;}
 .box p {width:50%; height:50%; background:rgba(0,0,0,.3); position:absolute; font-size:200px; left:50%; top:50%; transform:translate(-50%, -50%); margin:0; opacity:0; text-align:center; }
@@ -61,7 +62,7 @@ div.box:nth-child(1) section {
     position: absolute;
     right:10%;
 }
-div.box:nth-child(1) section span.cYello {color:rgb(230, 230, 10);}
+/*div.box:nth-child(1) section span.cYello {color:rgb(230, 230, 10);}*/
 
 div.box:nth-child(1) section#section1 {
     animation-name: fadeInMainText;
