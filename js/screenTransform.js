@@ -42,7 +42,7 @@ $(document).ready(function() {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
                         
-                        $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
+                        //$(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
                         
                         boxIndex = $(obj).next().index();
                         //console.log(boxIndex);
@@ -103,7 +103,7 @@ $(document).ready(function() {
                 if ($(elmSelecter).next() != undefined) {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
-                        $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
+                        //$(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
                         boxIndex = $(obj).next().index();
                         //console.log(boxIndex);
                         boxLoad(boxIndex, boxCount);
