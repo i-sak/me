@@ -16,9 +16,14 @@ function boxLoad(index, max) {
         title.setAttribute("id","title");
         // 중간 섹션
         var section1 = box.querySelector("section#section1");
+        var section2 = box.querySelector("section#section2");
         section1.removeAttribute("id");
+        section2.removeAttribute("id");
         void section1.clientWidth;
+        void section2.clientWidth;
         section1.setAttribute("id", "section1");
+        section2.setAttribute("id", "section2");
+
         // 바닥 라인
         var bottomLine = box.querySelector(".bottomLine");
         bottomLine.removeAttribute("class");
