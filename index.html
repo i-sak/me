@@ -6,8 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Isaac Kim</title>
     
-    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./css/common.css">
+    <link rel="stylesheet" type="text/css" href="./css/nav.css">
+    <link rel="stylesheet" type="text/css" href="./css/box1.css">
 
     <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>    
     <script type="text/javascript" src="./js/screenTransform.js"></script>
@@ -16,15 +19,15 @@
 
 </head>
 <body>
-    <div class="box">
+    <div class="box" id="box1">
         <div id="title">
-            <h4><a href="https://i-sak.github.io/me/">isaac</a></h4>
-            <h6 class="subTitle">
+            <p id="name"><a href="https://i-sak.github.io/me/">isaac</a></p>
+            <p class="subTitle">
                 <span id="phoneNumber">+82 10-7577-7263</span>
-            </h6>
-            <h6 class="subTitle">
+            </p>
+            <p class="subTitle">
                 <span id="email">isaac7263@naver.com</span>
-            </h6>
+            </p>
         </div>
         
         <section id="section1">
@@ -35,6 +38,7 @@
             <span class="circle c3">&nbsp;</span>
             <span class="circle c4">&nbsp;</span>
             <span class="circle c5">&nbsp;</span>
+            <span class="circle c6">&nbsp;</span>
         </section>
         
         
@@ -92,8 +96,8 @@
         </div>
     </div>
 
-    <div class="box" >2</div>
-    <div class="box" >3</div>
+    <div class="box" id="box2">2</div>
+    <div class="box" id="box3">3</div>
     <!--
     <div class="box" style="background-color:green;"><p>4</p></div>
     <div class="box" style="background-color:blue;"><p>5</p></div>
@@ -101,19 +105,26 @@
     <div class="box" style="background-color:violet;"><p>7</p></div>
     -->
 
-    <div id="fixedMenu">
-        <a href="javascript:clickMenuIcon();"><svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></a>
+    <div id="fixedMenuIcon">
+        <a href="javascript:clickMenuIcon();"><svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></a>
     </div>
     
     <nav id="navSpace">
-        <header>
-            <a class="close" href="javascript:clickMenuX();">X</a>
+        <header id="navHeader">
+            <a id="close" href="javascript:clickMenuX();">
+                <span class="material-icons">close</span>
+            </a>
         </header>
-        <section>
-            <a></a>
+        <section id="navSection">
+            <ul>
+                <li><a href="#box1">test</a></li>
+                <li><a href="#box2">test</a></li>
+                <li><a href="#box3">test</a></li>
+            </ul>
+            
         </section>
-        <footer>
-            <a></a>
+        <footer id="navFooter">
+            
         </footer>
     </nav>
 

@@ -1,24 +1,30 @@
-var pos = {
-    x : 0,
-    y : 0,
-}
-var elm;
-var boxIndex;
-var boxCount; // 0 or Max
 
-function initPos() {
-    pos.x = 0;
-    pos.y = 0;
-}
 // window.onload = function () { }
 $(document).ready(function() {
+    var pos = {
+        x : 0,
+        y : 0,
+    }
+    var elm;
+    var boxIndex;
+    var boxCount; // 0 or Max
+    
+    function initPos() {
+        pos.x = 0;
+        pos.y = 0;
+    }
+
     elm = ".box";
     boxCount = $(elm).length;
     
     $(elm).each(function (index) {
+        delegateEvent1PageControll(this, index);
+    });
 
+    function delegateEvent1PageControll(obj, index) {
+        
         // 개별적으로 Wheel 이벤트 적용
-        $(this).on("mousewheel DOMMouseScroll", function (e) {
+        $(obj).on("mousewheel DOMMouseScroll", function (e) {
             e.preventDefault();
             var delta = 0;
             if (!event) event = window.event;
@@ -38,7 +44,7 @@ $(document).ready(function() {
                         
                         $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
                         
-                        boxIndex = $(this).next().index();
+                        boxIndex = $(obj).next().index();
                         //console.log(boxIndex);
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -48,7 +54,7 @@ $(document).ready(function() {
                 if ($(elmSelecter).prev() != undefined) {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
-                        boxIndex = $(this).prev().index();
+                        boxIndex = $(obj).prev().index();
                         //console.log(boxIndex);
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -63,16 +69,20 @@ $(document).ready(function() {
                 }
             });
         }); // - end - mousewheel DOMMouseScroll
-        $(this).on("touchmove", function(e){
+
+        $(obj).on("touchmove", function(e){
             e.preventDefault();
         });
-        $(this).on("touchstart", function(e){
+        
+        $(obj).on("touchstart", function(e){
             initPos();
             pos.x = e.touches[0].clientX;
             pos.y = e.touches[0].clientY;
-            //console.log("s "+pos.x, pos.y);
+            
         }); // - end - touchstart
-        $(this).on("touchend", function(e){
+
+        $(obj).on("touchend", function(e){
+            
             var sx = pos.x;
             var sy = pos.y;
             var ex = e.changedTouches[0].clientX;
@@ -85,14 +95,16 @@ $(document).ready(function() {
             
 
             var moveTop = $(window).scrollTop();
+            
             var elmSelecter = $(".box").eq(index);
+            
             // 양수 아래 페이지, 음수 위 페이지
             if(perpendicular > 0) { // 아래 페이지
                 if ($(elmSelecter).next() != undefined) {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
                         $(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
-                        boxIndex = $(this).next().index();
+                        boxIndex = $(obj).next().index();
                         //console.log(boxIndex);
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -101,7 +113,7 @@ $(document).ready(function() {
                 if ($(elmSelecter).prev() != undefined) {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
-                        boxIndex = $(this).prev().index();
+                        boxIndex = $(obj).prev().index();
                         //console.log(boxIndex);
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -115,6 +127,6 @@ $(document).ready(function() {
                 duration: 300, complete: function () {}
             });
         }); // - end - touchend
+    }
 
-    });
 });

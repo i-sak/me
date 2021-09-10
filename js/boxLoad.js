@@ -14,7 +14,7 @@ function boxLoad(index, max) {
         title.removeAttribute("id");
         void title.clientWidth;
         title.setAttribute("id","title");
-        
+        // 중간 섹션
         var section1 = box.querySelector("section#section1");
         section1.removeAttribute("id");
         void section1.clientWidth;
@@ -24,5 +24,7 @@ function boxLoad(index, max) {
         bottomLine.removeAttribute("class");
         void bottomLine.offsetWidth; // 브라우저에서 강제 랜더링 시키기
         bottomLine.setAttribute("class", "bottomLine");
+        
     }
+
 }

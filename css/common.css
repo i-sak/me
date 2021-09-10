@@ -1,0 +1,34 @@
+/* 전체 분위기 컬러 #302C4D */
+:root {
+    --background-color : #302C4D
+}
+html,body{ margin:0; padding:0; width:100%; height:100%;}
+body{overflow-x:hidden;} /*가로스크롤바 없애기*/
+div, p, h3, h4, h5, h6 {margin: 0; padding : 0;}
+
+a,a:link,a:visited {text-decoration: none; color:white;}
+
+.box {
+    width:100%;
+    height:100%;
+    position:relative;
+    color:white;
+    background-color: var(--background-color);
+    /*font-size:24pt;*/
+}
+/*
+div.box:nth-child(1),
+div.box:nth-child(2),
+div.box:nth-child(3) {
+    background-color:var(--background-color);
+}
+*/
+
+/* 데스크톱에 사용될 스타일 시트를 작성합니다. */    
+@media screen and (min-width: 769px) {
+    div.box:nth-child(1) section#section1 {
+        font-size: 150%;
+    }
+    /*div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}*/
+}
+  

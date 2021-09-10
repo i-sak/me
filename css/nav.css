@@ -1,0 +1,75 @@
+/*===========================================================
+    nav 기본 세팅 start
+===========================================================*/
+/* Menu icon */
+div#fixedMenuIcon { 
+    position: fixed; top : 1%; right : 1%;    
+}
+/* nav Space 기본 세팅 */
+nav#navSpace {
+    background-color: rgb(3, 6, 22);
+    opacity: 0.7;
+
+    z-index: 2;
+
+    position : fixed;
+
+    top:0%;
+    right:0%;
+
+    width: 0%;
+    height: 100%;
+}
+nav.onNavSpace {animation: toLeftNavSpace 0.7s ease forwards;}
+nav.closeNavSpace {animation: toRightNavSpace 0.7s ease forwards;}
+@keyframes toLeftNavSpace {
+    0% {width: 0%}
+    100% { width: 70%}
+}
+@keyframes toRightNavSpace {
+    0% {width : 70%}
+    100% { width: 0%}
+}
+/*===========================================================
+    nav 기본 세팅 end
+===========================================================*/
+nav#navSpace > header {text-align: right;}
+nav#navSpace > header > a > span {font-size: 30pt;}
+.closeNavSpaceChildren {
+    animation: hideNavSpaceChildren .5s ease forwards;
+}
+.openNavSpaceChildren {
+    animation: showNavSpaceChildren 1s ease;
+}
+
+@keyframes hideNavSpaceChildren {
+    0% {opacity: 1; }
+    100% {opacity: 0; visibility: hidden;}
+}
+@keyframes showNavSpaceChildren {
+    0% {opacity: 0; visibility: inherit; }
+    100% {opacity: 1; }
+}
+
+/* 모바일에 사용될 스타일 시트를 작성합니다. */    
+/* @media screen and (max-width: 768px) {
+
+        div.box:nth-child(1) section#section1 {
+            font-size: 70%;
+        }
+        div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
+    }
+    
+    @media screen and (min-width: 768px) {
+        div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
+    }*/
+    
+/*===========================================================
+    nav section
+===========================================================*/
+#navSection {
+    padding-left: 10%;
+}
+#navSection ul {
+    list-style: none;
+}
