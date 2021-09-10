@@ -1,4 +1,7 @@
 /* 첫 번째 박스 */
+div.box:nth-child(1) {
+    overflow: hidden;
+}
 /* 최상단 Title */
 div.box:nth-child(1) #title {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -100,7 +103,7 @@ div.box:nth-child(1) section#section2 {
     left : 10%;
     position: absolute;
     animation :fadeInMainText2 3s ease forwards;
-    font-size: x-small;
+    font-size: small;
     font-weight: 100;
     width: 55%;
     z-index: 2;
