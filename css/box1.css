@@ -109,8 +109,8 @@ div.box:nth-child(1) section#section2 {
     z-index: 2;
 }
 @keyframes fadeInMainText2 {
-    0% { opacity : 0; top : 60%}
-    100% { opacity : 1; top : 50%}
+    0% { opacity : 0; top : 55%}
+    100% { opacity : 1; top : 45%}
 }
 div.box:nth-child(1) section#section2 p {
     color : rgba(245, 245, 245, 0.815);
@@ -123,15 +123,17 @@ div.box:nth-child(1) .bottomLine {
     z-index: 2;
     display: flex;
 
+    opacity: 0.9;
+
     align-items: center;        /* 가운데 정렬 (방향 : 상하) */
     justify-content: flex-end;  /* 오른쪽으로 부착 (방향 : 좌우) */
 
     width: 100%;   /* 너비 */
-    height : 11%;  /* 높이 */
-
+    height : 8%;  /* 높이 */
+    
     position:absolute;
 
-    top : 80%;
+    bottom : 7%;
     
     animation-name: fadeInbottomLine;
     animation-duration: 1.5s;
@@ -141,9 +143,9 @@ div.box:nth-child(1) .bottomLine {
     100% { opacity:1; left:0%;} 
 }
 div.box:nth-child(1) .bottomLine a {
-    margin-top: 25%;
-    margin-bottom: 25%;
-    height: 50%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+    height: 60%;
     
     margin-right: 1%;
     display: flex;
@@ -179,14 +181,14 @@ div.box:nth-child(1) .bottomLine a:hover {
 /* box1DecorationCircle */
 #box1DecorationCircle {
     position: absolute;
-    left: -100px;
-    bottom: 0px;
+    left: -300px;
+    bottom: -300px;
     display: inline-block;
     background-color: #211e36;
     opacity: 0.7;
     
-    width: 900px;
-    height: 900px;
+    width: 700px;
+    height: 700px;
     
     z-index: 1;
     border-radius: 50%;
