@@ -46,7 +46,7 @@ section#box2Section1 {
     height: 85%;
     background-color: rgb(26, 26, 26);
     
-    animation: stretchHeight 1.5s;
+    animation: stretchHeight .7s;
 }
 @keyframes stretchHeight {
     0% {height: 0%; opacity: 0;}
@@ -58,29 +58,41 @@ section#box2Section1 article {
     width: 100%;
     height: 100%;
 }
-
-
-#box2Section1 article:nth-child(1) .box2colrow {
-    
+/* colrow background 이미지  */
+#box2Section1 article:nth-child(1) .box2colrow:hover,
+#box2Section1 article:nth-child(2) .box2colrow:hover,
+#box2Section1 article:nth-child(3) .box2colrow:hover,
+#box2Section1 article:nth-child(4) .box2colrow:hover {
+    filter:brightness(150%); 
+}
+#box2Section1 article:nth-child(1) .box2colrow {    
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/programming.jpg");
+    background-size: cover;
+    transition: all ease 0.5s;
+}
+#box2Section1 article:nth-child(2) .box2colrow {    
     width: 100%;
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/bloger.jpg");
     background-size: cover;
-    
     transition: all ease 0.5s;
-    
 }
-#box2Section1 article:nth-child(1) .box2colrow:hover{
-    
-    filter:brightness(150%);
-    /*filter: grayscale(100%);*/
-    /*background-image: -webkit-linear-gradient(rgb(0,0,0),rgb(0,0,0) ),url("../img/bloger.jpg");*/
-    
+#box2Section1 article:nth-child(3) .box2colrow {    
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/keyboard.jpg");
+    background-size: cover;
+    transition: all ease 0.5s;
 }
-
-article:nth-child(2) { background-color: green; }
-article:nth-child(3) { background-color: blue; }
-article:nth-child(4) { background-color: darkcyan; }
+#box2Section1 article:nth-child(4) .box2colrow {    
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/jiujitsu.jpg");
+    background-size: cover;
+    transition: all ease 0.5s;
+}
 
 
 

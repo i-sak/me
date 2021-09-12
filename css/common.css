@@ -62,7 +62,11 @@ div.box:nth-child(3) {
         top:20%;
         width: 30%;
     }
-
+    #box1DecorationCircle {
+        
+        background-color: red;
+        
+    }
     /* box2*/
     div.box:nth-child(2) section#box2Section1 {
         
