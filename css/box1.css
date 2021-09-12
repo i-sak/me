@@ -124,8 +124,6 @@ div.box:nth-child(1) .bottomLine {
     z-index: 2;
     display: flex;
 
-    opacity: 0.9;
-
     align-items: center;        /* 가운데 정렬 (방향 : 상하) */
     justify-content: flex-end;  /* 오른쪽으로 부착 (방향 : 좌우) */
 
@@ -138,10 +136,11 @@ div.box:nth-child(1) .bottomLine {
     
     animation-name: fadeInbottomLine;
     animation-duration: 1.5s;
+    animation-fill-mode: forwards;
 }
 @keyframes fadeInbottomLine {
     0% { opacity:0; left:-100%;}
-    100% { opacity:1; left:0%;} 
+    100% { opacity:0.9; left:0%;} 
 }
 div.box:nth-child(1) .bottomLine a {
     margin-top: 20%;
