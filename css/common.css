@@ -48,12 +48,32 @@ div.box:nth-child(3) {
 
 /* 데스크톱에 사용될 스타일 시트를 작성합니다. */    
 @media screen and (min-width: 769px) {
+    /* nav */
+    section#navSection {
+        width: 50%;
+        right: 0%;
+    }
+
+    /* box1 */
     div.box:nth-child(1) section#section1 {
         font-size: 150%;
     }
     #backgroundImg{
         top:20%;
         width: 30%;
+    }
+
+    /* box2*/
+    div.box:nth-child(2) section#box2Section1 {
+        
+        flex-direction: row;
+        
+    }
+    div.box:nth-child(2) section#box2Section1 article {
+       
+        height: 100%;
+        width: 25%;
+
     }
     /*div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}*/
 }

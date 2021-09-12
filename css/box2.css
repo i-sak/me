@@ -4,6 +4,10 @@ div.box:nth-child(2) > header#box2header {
     position: absolute;
     height: 15%;
     width: 100%;
+
+    animation-name: fadeIn;
+    animation-duration: 2.7s;
+    animation-fill-mode: forwards;
 }
 div.box:nth-child(2) > header div#title {
     position: absolute;
@@ -13,16 +17,19 @@ div.box:nth-child(2) > header div#title {
     width: 90%;
     margin-left: 10%;
 }
+div.box:nth-child(2) > header div#title > h3 {
+    background-color: #1b192b;
+    padding : 1% 2%;
+}
 div.box:nth-child(2) > header div#title > h5 {
     font-weight: 100;
     display: flexbox;
     padding-left: 20%;
-    width: 80%;
+    width: 86%;
 }
 div.box:nth-child(2) > header div#title > h5 > span {
-    animation: twinkleAnimation 3s alternate-reverse infinite;
+    animation: twinkleAnimation 1s alternate-reverse infinite;
 }
-
 @keyframes twinkleAnimation {
     0% {color:white;}
     100% {color: yellow;}
@@ -31,15 +38,57 @@ div.box:nth-child(2) > header div#title > h5 > span {
 /* 중앙 */
 section#box2Section1 {
     position: absolute;
+    
+    display: flex;
+    flex-direction: column;
     top : 15%;
     width: 100%;
-    height: 70%;
-    display: flex;
-    background-color: white;
+    height: 85%;
+    background-color: rgb(26, 26, 26);
+    
+    animation: stretchHeight 1.5s;
 }
+@keyframes stretchHeight {
+    0% {height: 0%; opacity: 0;}
+    100% {height: 85%; opacity: 1;}
+}
+section#box2Section1 article {
+    padding:0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#box2Section1 article:nth-child(1) .box2colrow {
+    
+    width: 100%;
+    height: 100%;
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/bloger.jpg");
+    background-size: cover;
+    
+    transition: all ease 0.5s;
+    
+}
+#box2Section1 article:nth-child(1) .box2colrow:hover{
+    
+    filter:brightness(150%);
+    /*filter: grayscale(100%);*/
+    /*background-image: -webkit-linear-gradient(rgb(0,0,0),rgb(0,0,0) ),url("../img/bloger.jpg");*/
+    
+}
+
+article:nth-child(2) { background-color: green; }
+article:nth-child(3) { background-color: blue; }
+article:nth-child(4) { background-color: darkcyan; }
+
+
+
+/*
 section#box2Section1 div#box2bar {
     margin-left: 9%;
     width: 1%;
     background-color:  #302C4D;
     height: 100%;
 }
+*/

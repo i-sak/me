@@ -36,6 +36,29 @@ function boxLoad(index, max) {
         void title.clientWidth;
         title.setAttribute("id","backgroundImg");
         
+        return;
     }
+
+    switch (index) {
+        //box 2
+        case 1 : 
+            var box2header = box.querySelector("#box2header");
+            var box2Section1 = box.querySelector("#box2Section1");
+            
+            box2header.removeAttribute("id");
+            box2Section1.removeAttribute("id");
+
+            void box2header.clientWidth;
+            void box2Section1.clientWidth;
+
+            box2header.setAttribute("id", "box2header");
+            box2Section1.setAttribute("id", "box2Section1");
+
+            
+            return;
+
+    }
+    
+
 
 }

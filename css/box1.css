@@ -100,22 +100,24 @@ div.box:nth-child(1) span.c5 {
 
 /* 중간 section 2 */
 div.box:nth-child(1) section#section2 {
-    left : 10%;
+    left : 5%;
     position: absolute;
     text-align: justify;
-    animation :fadeInMainText2 3s ease forwards;
+    opacity: 0;
+    animation :fadeInMainText2 3s ease 1s forwards;
     font-size: small;
     font-weight: 100;
-    width: 55%;
+    width: 70%;
     z-index: 2;
+    color : rgba(245, 245, 245, 0.8)
 }
+
+
 @keyframes fadeInMainText2 {
     0% { opacity : 0; top : 65%}
     100% { opacity : 1; top : 55%}
 }
-div.box:nth-child(1) section#section2 p {
-    color : rgba(245, 245, 245, 0.815);
-}
+
 
 
 /* 바닥(꼬리말) 라인 - sns icon */
@@ -151,31 +153,27 @@ div.box:nth-child(1) .bottomLine a {
     display: flex;
     
     align-items: center; /* 상하 */
+
 }
+
 div.box:nth-child(1) .bottomLine a img,
-div.box:nth-child(1) .bottomLine a svg {
+div.box:nth-child(1) .bottomLine a svg { 
     position: relative;
     height: 80%;
     
-    /*margin-right: 2%;*/
-    
     animation-name: fadeInLogo;
     animation-duration: 2s;
-    animation-fill-mode: forwards;
+    
+    opacity: 0.5;
+    transition: opacity 0.3s;
 }
 @keyframes fadeInLogo {
     0% { opacity:0; }
-    100% { opacity:0.6; } 
+    100% { opacity:0.5; } 
 }
-div.box:nth-child(1) .bottomLine a:hover,
-div.box:nth-child(1) .bottomLine a:hover {
-    animation-name: fadeInLogo2;
-    animation-duration: 1s;
-}
-@keyframes fadeInLogo2 {
-    0% { opacity:0.3;}
-    50%{ height: 55%;}
-    100% { opacity:1; height: 50%;} 
+div.box:nth-child(1) .bottomLine a svg:hover,
+div.box:nth-child(1) .bottomLine a img:hover {
+    opacity: 1;
 }
 
 /* box1DecorationCircle */

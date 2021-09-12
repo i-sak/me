@@ -9,8 +9,7 @@ div#fixedMenuIcon {
 /* nav Space 기본 세팅 */
 nav#navSpace {
     background-color: rgb(3, 6, 22);
-    opacity: 0.7;
-
+    opacity: 0.9;
     z-index: 2;
 
     position : fixed;
@@ -21,28 +20,42 @@ nav#navSpace {
     width: 0%;
     height: 100%;
 }
-nav.onNavSpace {animation: toLeftNavSpace 0.7s ease forwards;}
-nav.closeNavSpace {animation: toRightNavSpace 0.7s ease forwards;}
+nav.onNavSpace {animation: toLeftNavSpace 0.4s ease forwards;}
+nav.closeNavSpace {animation: toRightNavSpace 0.9s ease ;}
 @keyframes toLeftNavSpace {
     0% {width: 0%}
     100% { width: 70%}
 }
 @keyframes toRightNavSpace {
-    0% {width : 70%}
+    0% {width : 70% }
     100% { width: 0%}
 }
+
+
 /*===========================================================
     nav 기본 세팅 end
+
+
+    X icon start
 ===========================================================*/
+
 nav#navSpace > header {text-align: right;}
-nav#navSpace > header > a > span {font-size: 30pt;}
-.closeNavSpaceChildren {
-    animation: hideNavSpaceChildren .5s ease forwards;
+nav#navSpace > header > a > span {
+    font-size: 30pt;
+    margin-top: 1%;
+    margin-right: 1%;
+    transition: all ease 1s;
 }
-.openNavSpaceChildren {
-    animation: showNavSpaceChildren 1s ease;
+nav#navSpace > header > a > span:hover {
+    transform: rotate( 180deg );
 }
 
+.closeNavSpaceChildren {
+    animation: hideNavSpaceChildren .4s ease forwards;
+}
+.openNavSpaceChildren {
+    animation: showNavSpaceChildren .9s ease;
+}
 @keyframes hideNavSpaceChildren {
     0% {opacity: 1; }
     100% {opacity: 0; visibility: hidden;}
@@ -68,9 +81,20 @@ nav#navSpace > header > a > span {font-size: 30pt;}
 /*===========================================================
     nav section
 ===========================================================*/
-#navSection {
-    padding-left: 10%;
+#navSection { 
+    width: 100%;
+    padding : 3%;
+    position: absolute;
+    background-color: black;
+    color: whitesmoke;
 }
-#navSection ul {
-    list-style: none;
+#navSection ul {list-style: none; }
+#navSection ul li a {
+    font-weight: bold ;
+    transition: color 0.5s ;
 }
+#navSection ul li a:hover { color : teal; }
+
+/*===========================================================
+    nav footer
+===========================================================*/
