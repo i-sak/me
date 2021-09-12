@@ -53,9 +53,9 @@ div.box:nth-child(1) section#section1 {
     0% { opacity: 0; top:30%;}
     100% { opacity: 1; top:20%;}
 }
-div.box:nth-child(1) section#section1 h4 {
-    padding-top: 10%;   
-    font-weight: 100;
+div.box:nth-child(1) section#section1 h3 {
+    /*padding-top: 10%;   */
+    font-weight: 500;
 }
 
 div.box:nth-child(1) #section1 span.circle {
@@ -102,6 +102,7 @@ div.box:nth-child(1) span.c5 {
 div.box:nth-child(1) section#section2 {
     left : 10%;
     position: absolute;
+    text-align: justify;
     animation :fadeInMainText2 3s ease forwards;
     font-size: small;
     font-weight: 100;
@@ -109,8 +110,8 @@ div.box:nth-child(1) section#section2 {
     z-index: 2;
 }
 @keyframes fadeInMainText2 {
-    0% { opacity : 0; top : 55%}
-    100% { opacity : 1; top : 45%}
+    0% { opacity : 0; top : 60%}
+    100% { opacity : 1; top : 50%}
 }
 div.box:nth-child(1) section#section2 p {
     color : rgba(245, 245, 245, 0.815);

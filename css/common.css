@@ -4,7 +4,7 @@
 }
 html,body{ margin:0; padding:0; width:100%; height:100%;}
 body{overflow-x:hidden;} /*가로스크롤바 없애기*/
-div, p, h3, h4, h5, h6 {margin: 0; padding : 0;}
+div, p, h2, h3, h4, h5, h6 {margin: 0; padding : 0;}
 
 a,a:link,a:visited {text-decoration: none; color:white;}
 
@@ -17,8 +17,13 @@ a,a:link,a:visited {text-decoration: none; color:white;}
     background-color: var(--background-color);
     /*font-size:24pt;*/
 }
+
+div.box:nth-child(1) {
+    background-image: url("../img/background.png");
+    background-size: 100% 100%;
+}
 /*
-div.box:nth-child(1),
+
 div.box:nth-child(2),
 div.box:nth-child(3) {
     background-color:var(--background-color);
