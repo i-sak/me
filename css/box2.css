@@ -18,8 +18,16 @@ div.box:nth-child(2) > header div#title > h5 {
     display: flexbox;
     padding-left: 20%;
     width: 80%;
-    
 }
+div.box:nth-child(2) > header div#title > h5 > span {
+    animation: twinkleAnimation 3s alternate-reverse infinite;
+}
+
+@keyframes twinkleAnimation {
+    0% {color:white;}
+    100% {color: yellow;}
+}
+
 /* 중앙 */
 section#box2Section1 {
     position: absolute;
