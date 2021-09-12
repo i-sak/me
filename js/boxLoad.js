@@ -30,6 +30,12 @@ function boxLoad(index, max) {
         void bottomLine.offsetWidth; // 브라우저에서 강제 랜더링 시키기
         bottomLine.setAttribute("class", "bottomLine");
         
+        // Title
+        var title = box.querySelector("#backgroundImg");
+        title.removeAttribute("id");
+        void title.clientWidth;
+        title.setAttribute("id","backgroundImg");
+        
     }
 
 }
