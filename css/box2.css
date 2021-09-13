@@ -6,9 +6,9 @@ div.box:nth-child(2) > header#box2header {
     position: absolute;
     height: 15%;
     width: 100%;
-    background-color: rgb(61, 61, 61);
+    
     animation-name: fadeIn;
-    animation-duration: 0.3s;
+    animation-duration: 0.6s;
     
 }
 div.box:nth-child(2) > header div#title {
@@ -40,13 +40,8 @@ section#box2Section1 {
     top : 15%;
     width: 100%;
     height: 85%;
-    background-color: rgb(26, 26, 26);
-    
-    animation: stretchHeight .6s;
-}
-@keyframes stretchHeight {
-    0% {height: 60%; opacity: 0;}
-    100% {height: 85%; opacity: 1;}
+
+    animation: fadeIn .6s;
 }
 section#box2Section1 article {
     padding:0;

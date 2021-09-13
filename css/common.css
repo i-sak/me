@@ -17,10 +17,12 @@ a,a:link,a:visited {text-decoration: none; color:white;}
     
     /*font-size:24pt;*/
 }
-.box:nth-child(1) { background-color: var(--background-color); }
-.box:nth-child(2) { background-color: gray; }
-.box:nth-child(3) { background-color: var(--background-color);; }
-.box:nth-child(4) { background-color: var(--background-color);; }
+/*.box:nth-child(1) { background-color: var(--background-color); }*/
+.box:nth-child(1) { background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) }
+.box:nth-child(2) { background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) }
+
+.box:nth-child(3) { background-color: var(--background-color); }
+.box:nth-child(4) { background-color: var(--background-color); }
 
 /* backgroundImg */
 #backgroundImg {
