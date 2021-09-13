@@ -11,7 +11,7 @@ div.box:nth-child(1) #title {
     width: 55%;
     z-index: 2;
     animation-name: fadeInHeader;
-    animation-duration: 2s;
+    animation-duration: 1.8s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -45,7 +45,7 @@ div.box:nth-child(1) section#section1 {
     z-index: 2;
     right:10%;
     animation-name: fadeInMainText;
-    animation-duration: 2.5s;
+    animation-duration: 2.2s;
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
@@ -105,7 +105,7 @@ div.box:nth-child(1) section#section2 {
     position: absolute;
     text-align: justify;
     
-    animation :fadeInMainText2 2s ease;
+    animation :fadeInMainText2 1.7s ease;
     
     font-size: small;
     
@@ -139,7 +139,7 @@ div.box:nth-child(1) .bottomLine {
     bottom : 7%;
     
     animation-name: fadeInbottomLine;
-    animation-duration: 1.5s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
 }
 @keyframes fadeInbottomLine {
@@ -164,7 +164,7 @@ div.box:nth-child(1) .bottomLine a svg {
     height: 80%;
     
     animation-name: fadeInLogo;
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     
     opacity: 0.5;
     transition: opacity 0.3s;

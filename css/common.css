@@ -31,8 +31,8 @@ a,a:link,a:visited {text-decoration: none; color:white;}
     right: 1%;
     width: 40%;
     animation-name: fadeIn;
-    animation-duration: 3.5s;
-    animation-delay: 1.5s;
+    animation-duration: 3s;
+    animation-delay: 0.5s;
     animation-fill-mode: forwards;
 }
 
@@ -43,14 +43,17 @@ a,a:link,a:visited {text-decoration: none; color:white;}
 /* up button */
 #fixedUpIcon {
     position: fixed;
+    display: flex;
+    justify-content: center;
+    
     bottom : 1%;
     right: 1%;
     background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
     
     text-align: center;
 
-    width: 34px;
-    height: 34px;
+    width: 26px;
+    height: 26px;
     border-radius: 50%;
     border:1px solid white;
 }

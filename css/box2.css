@@ -8,7 +8,7 @@ div.box:nth-child(2) > header#box2header {
     width: 100%;
     
     animation-name: fadeIn;
-    animation-duration: 0.6s;
+    animation-duration: 0.5s;
     
 }
 div.box:nth-child(2) > header div#title {
@@ -62,32 +62,36 @@ section#box2Section1 .box2colrow {
     filter:brightness(150%); 
 }
 #box2Section1 article:nth-child(1) .box2colrow {    
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/programming.jpg");
     background-size: cover;
-    transition: all ease 0.5s;
+    transition: all ease 0.4s;
 }
 #box2Section1 article:nth-child(2) .box2colrow {    
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/bloger.jpg");
     background-size: cover;
-    transition: all ease 0.5s;
+    transition: all ease 0.4s;
 }
 #box2Section1 article:nth-child(3) .box2colrow {    
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/keyboard.jpg");
     background-size: cover;
-    transition: all ease 0.5s;
+    transition: all ease 0.4s;
 }
 #box2Section1 article:nth-child(4) .box2colrow {    
+    overflow: hidden;
     width: 100%;
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/jiujitsu.jpg");
     background-size: cover;
-    transition: all ease 0.5s;
+    transition: all ease 0.4s;
 }
 
 /* hidden 박스 */
@@ -110,13 +114,13 @@ div#box2hiddenDivParent {
     100%{opacity: 0; visibility: hidden;}
 }
 
+/* X 버튼 */
 #closeButtonForBox2hiddenDivParent {
     display: flex;
     padding-top: 3%;
     z-index: 3s;
     justify-content: center;
 }
-
 #closeButtonForBox2hiddenDivParent a {
     text-align: center;
     display: flex;
@@ -127,12 +131,14 @@ div#box2hiddenDivParent {
     border-radius: 50%;
     border:1px solid white;
     background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
-    width: 34px;
-    height :34px;
+    width: 26px;
+    height :26px;
     filter: brightness(150%);
 }
 
-
+#box2hiddenDivParent .hiddenDiv {
+    visibility: hidden;
+}
 /*
 section#box2Section1 div#box2bar {
     margin-left: 9%;
