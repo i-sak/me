@@ -101,12 +101,13 @@ div.box:nth-child(1) span.c5 {
 /* 중간 section 2 */
 div.box:nth-child(1) section#section2 {
     left : 5%;
+    top : 55%;
     position: absolute;
     text-align: justify;
-    opacity: 0;
-    animation :fadeInMainText2 3s ease 1s forwards;
     
-    font-size: x-small;
+    animation :fadeInMainText2 4s ease;
+    
+    font-size: small;
     
     font-weight: 100;
     

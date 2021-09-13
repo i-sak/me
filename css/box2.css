@@ -1,12 +1,14 @@
 /* 두 번째 박스 */
 /* header */
 div.box:nth-child(2) > header#box2header {
+    padding:0;
+    margin:0;
     position: absolute;
     height: 15%;
     width: 100%;
-
+    background-color: rgb(61, 61, 61);
     animation-name: fadeIn;
-    animation-duration: 2.7s;
+    animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 div.box:nth-child(2) > header div#title {
@@ -18,7 +20,7 @@ div.box:nth-child(2) > header div#title {
     margin-left: 10%;
 }
 div.box:nth-child(2) > header div#title > h3 {
-    background-color: #1b192b;
+    background-color: rgb(31, 31, 31);
     padding : 1% 2%;
 }
 div.box:nth-child(2) > header div#title > h5 {
@@ -46,7 +48,7 @@ section#box2Section1 {
     height: 85%;
     background-color: rgb(26, 26, 26);
     
-    animation: stretchHeight .7s;
+    animation: stretchHeight .5s;
 }
 @keyframes stretchHeight {
     0% {height: 0%; opacity: 0;}

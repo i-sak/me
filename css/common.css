@@ -14,9 +14,11 @@ a,a:link,a:visited {text-decoration: none; color:white;}
     height:100%;
     position:relative;
     color:white;
-    background-color: var(--background-color);
+    
     /*font-size:24pt;*/
 }
+.box:nth-child(1) { background-color: var(--background-color); }
+.box:nth-child(2) { background-color: gray; }
 
 /* backgroundImg */
 #backgroundImg {
@@ -62,11 +64,10 @@ div.box:nth-child(3) {
         top:20%;
         width: 30%;
     }
-    #box1DecorationCircle {
-        
-        background-color: red;
-        
+    div.box:nth-child(1) section#section2 {
+        font-size: xx-large;
     }
+
     /* box2*/
     div.box:nth-child(2) section#box2Section1 {
         
