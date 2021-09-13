@@ -8,7 +8,7 @@ div.box:nth-child(2) > header#box2header {
     width: 100%;
     background-color: rgb(61, 61, 61);
     animation-name: fadeIn;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 }
 div.box:nth-child(2) > header div#title {
@@ -59,6 +59,11 @@ section#box2Section1 article {
     margin: 0;
     width: 100%;
     height: 100%;
+}
+section#box2Section1 .box2colrow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 /* colrow background 이미지  */
 #box2Section1 article:nth-child(1) .box2colrow:hover,
