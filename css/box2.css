@@ -90,6 +90,47 @@ section#box2Section1 .box2colrow {
     transition: all ease 0.5s;
 }
 
+/* hidden 박스 */
+div#box2hiddenDivParent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 2s;
+    background-color: black;
+    opacity: 0.6;
+    visibility: hidden;
+    
+}
+@keyframes visibilityOn {
+    0%{opacity: 0; visibility:visible;}
+    100%{opacity: 0.6; visibility:visible;}
+}
+@keyframes visibilityOff {
+    0%{opacity: 0.6;visibility:visible; }
+    100%{opacity: 0; visibility: hidden;}
+}
+
+#closeButtonForBox2hiddenDivParent {
+    display: flex;
+    padding-top: 3%;
+    z-index: 3s;
+    justify-content: center;
+}
+
+#closeButtonForBox2hiddenDivParent a {
+    text-align: center;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    border:1px solid white;
+    background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
+    width: 34px;
+    height :34px;
+    filter: brightness(150%);
+}
 
 
 /*

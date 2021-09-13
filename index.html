@@ -17,12 +17,13 @@
     <script type="text/javascript" src="./js/screenTransform.js"></script>
     <script type="text/javascript" src="./js/boxLoad.js"></script>
     <script type="text/javascript" src="./js/menu.js"></script>
+    <script type="text/javascript" src="./js/box2.js"></script>
 
 </head>
 <body>
     <div class="box" id="box1">
         <div id="title">
-            <p id="name"><a href="https://i-sak.github.io/me/">isaac</a></p>
+            <p id="name"><a href="https://i-sak.github.io/me/">isaac.</a></p>
             <p class="subTitle">
                 <span id="phoneNumber">+82 10-7577-7263</span>
             </p>
@@ -119,7 +120,7 @@
         </header>
         <section id="box2Section1">
             <article>
-                <a href="#">
+                <a href="javascript:clickBox2Aticle(1)">
                     <div class="box2colrow">
                         <h3>01. Project</h3>
                     </div>
@@ -127,7 +128,7 @@
             </article>
 
             <article>
-                <a href="#">
+                <a href="javascript:clickBox2Aticle(2)">
                     <div class="box2colrow">
                         <h3>02. R&D, Study</h3>
                     </div>
@@ -135,7 +136,7 @@
             </article>
 
             <article>
-                <a href="#">
+                <a href="javascript:clickBox2Aticle(3)">
                     <div class="box2colrow">
                         <h3>03. Music</h3>
                     </div>
@@ -143,23 +144,37 @@
             </article>
 
             <article>
-                <a href="#">
+                <a href="javascript:clickBox2Aticle(4)">
                     <div class="box2colrow">
                         <h3>04. Sports</h3>
                     </div>
                 </a>
             </article>
         </section>
+
+        <!-- hidden box cover -->
+        <div id="box2hiddenDivParent">
+            <div id="closeButtonForBox2hiddenDivParent">
+                <h3><a href="javascript:closeBox2hiddenDivParent()">X</a></h3>
+            </div>
+            <div id="box2hiddenArticle1" class="hiddenDiv">
+
+            </div>
+            <div id="box2hiddenArticle2" class="hiddenDiv">
+
+            </div>
+            <div id="box2hiddenArticle3" class="hiddenDiv">
+
+            </div>
+            <div id="box2hiddenArticle4" class="hiddenDiv">
+
+            </div>
+        </div>
     </div>
     <!-- / div#box2 -->
 
-
     <div class="box" id="box3">3</div>
-    <div class="box" id="box4">4</div>
-    <!--<div class="box" style="background-color:blue;"><p>5</p></div>
-    <div class="box" style="background-color:indigo;"><p>6</p></div>
-    <div class="box" style="background-color:violet;"><p>7</p></div>
-    -->
+    
 
     <div id="fixedMenuIcon">
         <a href="javascript:clickMenuIcon();"><svg class="menuIcon" xmlns="http://www.w3.org/2000/svg" height="30px" viewBox="0 0 24 24" width="30px" fill="#FFFFFF"><path d="M0 0h24v24H0V0z" fill="none"/><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg></a>
@@ -185,6 +200,10 @@
             
         </footer>
     </nav>
+
+    <div id="fixedUpIcon">
+        <h3><a href="#">▲</a></h3>
+    </div>
 
 </body>
 </html>
