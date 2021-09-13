@@ -105,7 +105,7 @@ div.box:nth-child(1) section#section2 {
     position: absolute;
     text-align: justify;
     
-    animation :fadeInMainText2 4s ease;
+    animation :fadeInMainText2 2s ease;
     
     font-size: small;
     

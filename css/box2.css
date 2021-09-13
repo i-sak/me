@@ -8,8 +8,8 @@ div.box:nth-child(2) > header#box2header {
     width: 100%;
     background-color: rgb(61, 61, 61);
     animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    
 }
 div.box:nth-child(2) > header div#title {
     position: absolute;
@@ -29,13 +29,7 @@ div.box:nth-child(2) > header div#title > h5 {
     padding-left: 20%;
     width: 86%;
 }
-div.box:nth-child(2) > header div#title > h5 > span {
-    animation: twinkleAnimation 1s alternate-reverse infinite;
-}
-@keyframes twinkleAnimation {
-    0% {color:white;}
-    100% {color: yellow;}
-}
+div.box:nth-child(2) > header div#title > h5 > span {color:yellow;}
 
 /* 중앙 */
 section#box2Section1 {
@@ -48,10 +42,10 @@ section#box2Section1 {
     height: 85%;
     background-color: rgb(26, 26, 26);
     
-    animation: stretchHeight .5s;
+    animation: stretchHeight .6s;
 }
 @keyframes stretchHeight {
-    0% {height: 0%; opacity: 0;}
+    0% {height: 60%; opacity: 0;}
     100% {height: 85%; opacity: 1;}
 }
 section#box2Section1 article {
