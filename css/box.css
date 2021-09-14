@@ -9,7 +9,7 @@ div.box:nth-child(1) {
 div.box:nth-child(1) #title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;    
-    padding-top: 1%;
+    padding-top: 2%;
     position: absolute;
     width: 55%;
     z-index: 2;
@@ -104,7 +104,7 @@ div.box:nth-child(1) span.c5 {
 /* 중간 section 2 */
 div.box:nth-child(1) section#section2 {
     left : 5%;
-    top : 55%;
+    top : 60%;
     position: absolute;
     text-align: justify;
     
@@ -119,8 +119,8 @@ div.box:nth-child(1) section#section2 {
     color : rgba(245, 245, 245, 0.8)
 }
 @keyframes fadeInMainText2 {
-    0% { opacity : 0; top : 65%}
-    100% { opacity : 1; top : 55%}
+    0% { opacity : 0; top : 70%}
+    100% { opacity : 1; top : 60%}
 }
 
 
@@ -242,13 +242,17 @@ div.box:nth-child(2) > header div#title > h5 > span {color:yellow;}
 
 /* 중앙 */
 section#box2Section1 {
+    
+    margin: 0%;
+    padding: 0%;
+
     position: absolute;
     
     display: flex;
     flex-direction: column;
-    top : 12%;
+    
     width: 100%;
-    height: 77%;
+    height: 100%;
 
     animation: fadeIn 0.7s;
 }
@@ -258,11 +262,20 @@ section#box2Section1 article {
     width: 100%;
     height: 100%;
 }
+section#box2Section1 article a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+/*
 section#box2Section1 .box2colrow {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+*/
 /* colrow background 이미지  */
 /*
 #box2Section1 article:nth-child(1) .box2colrow:hover,
@@ -305,22 +318,26 @@ section#box2Section1 .box2colrow {
 #box2Section1 article {
     overflow: hidden;
     background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 #box2Section1 article:hover {
     filter:brightness(150%); 
 }
 
 #box2Section1 article:nth-child(1) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/programming.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/programming.jpg");
 }
 #box2Section1 article:nth-child(2) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/bloger.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/bloger.jpg");
 }
 #box2Section1 article:nth-child(3) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/keyboard.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/keyboard.jpg");
 }
 #box2Section1 article:nth-child(4) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/jiujitsu.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/jiujitsu.jpg");
 }
 
 /* hidden 박스 */
@@ -378,5 +395,5 @@ section#box2Section1 div#box2bar {
 */
 
 /*********************************************************************
-    BOX 2 CSS START
+    BOX 2 CSS END 
 *********************************************************************/

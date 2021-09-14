@@ -43,6 +43,9 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).next().offset().top;
                         boxIndex = $(obj).next().index();
                         
+                        if( boxCount != boxIndex  ) $(obj).style.zindex = -5
+                        $(obj).next().style.zindex = +5
+
                         ///if( boxCount != boxIndex  ) $(obj).slideUp(2000);
                         ///$(obj).next().slideDown(2000);
                         
@@ -55,6 +58,9 @@ $(document).ready(function() {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
                         boxIndex = $(obj).prev().index();
+                        
+                        if( boxCount != boxIndex  ) $(obj).style.zindex = -5
+                        $(obj).prev().style.zindex = +5
                         
                         ///if ( 1 != boxIndex) $(obj).slideUp(2000);
                         ///$(obj).prev().slideDown(2000);
@@ -94,7 +100,7 @@ $(document).ready(function() {
             // 수평 이동
             if ( Math.abs(sx - ex) > Math.abs(perpendicular) ) return;
             // 
-            if (Math.abs(perpendicular) <= 20 ) return;
+            if (Math.abs(perpendicular) <= 10 ) return;
             
 
             var moveTop = $(window).scrollTop();
@@ -108,7 +114,10 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).next().offset().top;
                         boxIndex = $(obj).next().index();
                         
-                        ///if( boxCount != boxIndex  ) $(obj).slideUp(700);
+                        if( boxCount != boxIndex  ) $(obj).style.zindex = -5
+                        $(obj).next().style.zindex = +5
+
+                        //if( boxCount != boxIndex  ) $(obj).slideUp(700);
                         ///$(obj).next().slideDown(700);
 
                         boxLoad(boxIndex, boxCount);
@@ -120,6 +129,9 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).prev().offset().top;
                         boxIndex = $(obj).prev().index();
                         
+                        if( boxCount != boxIndex  ) $(obj).style.zindex = -5
+                        $(obj).prev().style.zindex = +5
+
                         ///if ( 1 != boxIndex) $(obj).slideUp(700);
                         ///$(obj).prev().slideDown(700);
 
