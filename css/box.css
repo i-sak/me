@@ -47,10 +47,10 @@ div.box:nth-child(1) section#section1 {
     position: absolute;
     z-index: 2;
     right:10%;
+    top:20%;
     animation-name: fadeInMainText;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
-    animation-fill-mode: forwards;
 }
 @keyframes fadeInMainText {
     0% { opacity: 0; top:30%;}
@@ -146,7 +146,42 @@ div.box:nth-child(1) section#section2 ul li.box1Off {
     100% {left: -100px; opacity: 0; }
 }
 
-
+/* 꾸밈 decoration */
+section#section1 span.light {
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    width : 4px;
+    height: 100px;
+    opacity: 0.5;
+    z-index: 2;
+    top:40%;
+}
+span.lt1 {
+    background: linear-gradient(to top, rgb(14, 75, 75), rgb(236, 255, 255));
+    
+    right: 50px;
+}
+span.lt2 {
+    background: linear-gradient(to top,rgb(15, 15, 59),rgb(182, 182, 255));
+    
+    left: 50px;
+}
+section#section1 span.lt3 {
+    background: linear-gradient(to top, white,black);
+    
+    right: 50px;
+}
+section#section1 span.lt4 {
+    background: linear-gradient(to top, midnightblue,white);
+    
+    right: 20px;
+}
+section#section1 span.lt5 {
+    background: linear-gradient(to top,black, white);
+    
+    right: 20%;
+}
 
 /* 바닥(꼬리말) 라인 - sns icon */
 div.box:nth-child(1) .bottomLine {
