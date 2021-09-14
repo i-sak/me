@@ -11,16 +11,18 @@ function boxLoad(index, max) {
         // console.log("첫 번째 box load")
         // Title
         var title = box.querySelector("#title");
-        title.removeAttribute("id");
-        void title.clientWidth;
-        title.setAttribute("id","title");
-        // 중간 섹션
         var section1 = box.querySelector("section#section1");
         var section2 = box.querySelector("section#section2");
+
+        title.removeAttribute("id");
         section1.removeAttribute("id");
         section2.removeAttribute("id");
+        
+        void title.clientWidth;
         void section1.clientWidth;
         void section2.clientWidth;
+        
+        title.setAttribute("id","title");
         section1.setAttribute("id", "section1");
         section2.setAttribute("id", "section2");
 
@@ -28,37 +30,33 @@ function boxLoad(index, max) {
         var bottomLine = box.querySelector(".bottomLine");
         bottomLine.removeAttribute("class");
         void bottomLine.offsetWidth; // 브라우저에서 강제 랜더링 시키기
-        bottomLine.setAttribute("class", "bottomLine");
-        
-        // Title
-        var title = box.querySelector("#backgroundImg");
-        title.removeAttribute("id");
-        void title.clientWidth;
-        title.setAttribute("id","backgroundImg");
-        
+        bottomLine.setAttribute("class", "bottomLine");        
         return;
     }
 
     switch (index) {
         //box 2
-        case 1 : 
-            var box2header = box.querySelector("#box2header");
-            var box2Section1 = box.querySelector("#box2Section1");
-            
-            box2header.removeAttribute("id");
-            box2Section1.removeAttribute("id");
-
-            void box2header.clientWidth;
-            void box2Section1.clientWidth;
-
-            box2header.setAttribute("id", "box2header");
-            box2Section1.setAttribute("id", "box2Section1");
-
-            
+        case 1 :             
             return;
-
     }
-    
-
-
 }
+
+// =======================================
+// box 2 event 
+// =======================================
+function clickBox2Aticle(idx) {
+    console.log("clickBox2Aticle idx : " + idx)
+    // box cover
+    visibledBox2hiddenDivParent();
+}
+// on
+function visibledBox2hiddenDivParent () {
+    var box2hiddenDivParent = document.querySelector("div#box2hiddenDivParent");
+    box2hiddenDivParent.style.animation = "visibilityOn 0.3s forwards";
+}
+// off
+function closeBox2hiddenDivParent() {
+    var box2hiddenDivParent = document.querySelector("div#box2hiddenDivParent");
+    box2hiddenDivParent.style.animation = 'visibilityOff 0.3s forwards'
+}
+
