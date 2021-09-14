@@ -24,8 +24,6 @@ a,a:link,a:visited {text-decoration: none; color:white;}
 .box:nth-child(1) { background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) }
 .box:nth-child(2) { background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) }
 .box:nth-child(3) { background-color: var(--background-color); }
-.box:nth-child(4) { background-color: var(--background-color); }
-
 
 @keyframes fadeIn {
     0% {opacity: 0;}
@@ -72,13 +70,12 @@ a,a:link,a:visited {text-decoration: none; color:white;}
     /* box2*/
     div.box:nth-child(2) section#box2Section1 {
         flex-direction: row;
+        
     }
     /*section#box2Section1 .box2colrow*/
     div.box:nth-child(2) section#box2Section1 article {
         font-size: x-large;
-        height: 100%;
-        width: 25%;
-
+        
     }
     /*div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}*/
 }
@@ -115,7 +112,7 @@ nav#navSpace {
     height: 100%;
 }
 nav.onNavSpace {animation: toLeftNavSpace 0.4s ease forwards;}
-nav.closeNavSpace {animation: toRightNavSpace 0.9s ease ;}
+nav.closeNavSpace {animation: toRightNavSpace 0.8s ease ;}
 @keyframes toLeftNavSpace {
     0% {width: 0%}
     100% { width: 70%}

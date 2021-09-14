@@ -43,8 +43,8 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).next().offset().top;
                         boxIndex = $(obj).next().index();
                         
-                        if( boxCount != boxIndex  ) $(obj).slideUp(700);
-                        $(obj).next().slideDown(700);
+                        ///if( boxCount != boxIndex  ) $(obj).slideUp(2000);
+                        ///$(obj).next().slideDown(2000);
                         
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -56,8 +56,8 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).prev().offset().top;
                         boxIndex = $(obj).prev().index();
                         
-                        if ( 1 != boxIndex) $(obj).slideUp(700);
-                        $(obj).prev().slideDown(700);
+                        ///if ( 1 != boxIndex) $(obj).slideUp(2000);
+                        ///$(obj).prev().slideDown(2000);
                         
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -66,9 +66,9 @@ $(document).ready(function() {
 
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
-                //scrollTop: moveTop + 'px'
+                scrollTop: moveTop + 'px'
             }, {
-                duration: 300, complete: function () {
+                duration: 800, complete: function () {
                 }
             });
         }); // - end - mousewheel DOMMouseScroll
@@ -108,8 +108,8 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).next().offset().top;
                         boxIndex = $(obj).next().index();
                         
-                        if( boxCount != boxIndex  ) $(obj).slideUp(700);
-                        $(obj).next().slideDown(700);
+                        ///if( boxCount != boxIndex  ) $(obj).slideUp(700);
+                        ///$(obj).next().slideDown(700);
 
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -120,8 +120,8 @@ $(document).ready(function() {
                         moveTop = $(elmSelecter).prev().offset().top;
                         boxIndex = $(obj).prev().index();
                         
-                        if ( 1 != boxIndex) $(obj).slideUp(700);
-                        $(obj).prev().slideDown(700);
+                        ///if ( 1 != boxIndex) $(obj).slideUp(700);
+                        ///$(obj).prev().slideDown(700);
 
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
@@ -130,9 +130,9 @@ $(document).ready(function() {
 
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
-                // scrollTop: moveTop + 'px'
+                scrollTop: moveTop + 'px'
             }, {
-                duration: 300, complete: function () {}
+                duration: 800, complete: function () {}
             });
         }); // - end - touchend
     }
