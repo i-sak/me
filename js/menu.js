@@ -6,8 +6,8 @@ function clickMenuIcon() {
     showCloseButton();
 
     navSpace.addEventListener("mousewheel", function(event) {
-        var top = document.getElementsByTagName("body")[0].getBoundingClientRect().top;
-        var bottom = document.getElementsByTagName("body")[0].getBoundingClientRect().bottom
+        ///var top = document.getElementsByTagName("body")[0].getBoundingClientRect().top;
+        ///var bottom = document.getElementsByTagName("body")[0].getBoundingClientRect().bottom
         event.preventDefault();
     });
 
