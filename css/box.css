@@ -167,7 +167,7 @@ div.box:nth-child(1) .bottomLine a svg {
     height: 80%;
     
     animation-name: fadeInLogo;
-    animation-duration: 1s;
+    animation-duration: 0.7s;
     
     opacity: 0.5;
     transition: opacity 0.3s;
@@ -205,7 +205,7 @@ div.box:nth-child(1) .bottomLine a img:hover {
     right: 1%;
     width: 40%;
     animation-name: fadeIn;
-    animation-duration: 1.7s;
+    animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -228,7 +228,7 @@ div.box:nth-child(2) > header#box2header {
     width: 100%;
     
     animation-name: fadeIn;
-    animation-duration: 0.7s;
+    animation-duration: 0.5s;
     
 }
 div.box:nth-child(2) > header div#title {
@@ -261,7 +261,7 @@ section#box2Section1 {
     width: 100%;
     height: 77%;
 
-    animation: fadeIn 1.2s;
+    animation: fadeIn 0.5s;
 }
 section#box2Section1 article {
     padding:0;
@@ -287,7 +287,7 @@ section#box2Section1 .box2colrow {
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/programming.jpg");
     background-size: cover;
-    transition: all ease 0.4s;
+    transition: all ease 0.3s;
 }
 #box2Section1 article:nth-child(2) .box2colrow {    
     overflow: hidden;
@@ -295,7 +295,7 @@ section#box2Section1 .box2colrow {
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/bloger.jpg");
     background-size: cover;
-    transition: all ease 0.4s;
+    transition: all ease 0.3s;
 }
 #box2Section1 article:nth-child(3) .box2colrow {    
     overflow: hidden;
@@ -303,7 +303,7 @@ section#box2Section1 .box2colrow {
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/keyboard.jpg");
     background-size: cover;
-    transition: all ease 0.4s;
+    transition: all ease 0.3s;
 }
 #box2Section1 article:nth-child(4) .box2colrow {    
     overflow: hidden;
@@ -311,7 +311,7 @@ section#box2Section1 .box2colrow {
     height: 100%;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/jiujitsu.jpg");
     background-size: cover;
-    transition: all ease 0.4s;
+    transition: all ease 0.3s;
 }
 
 /* hidden 박스 */
