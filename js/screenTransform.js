@@ -41,11 +41,11 @@ $(document).ready(function() {
                 if ($(elmSelecter).next() != undefined) {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
-                        
-                        //$(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
-                        
                         boxIndex = $(obj).next().index();
-                        //console.log(boxIndex);
+                        
+                        if( boxCount != boxIndex  ) $(obj).slideUp(700);
+                        $(obj).next().slideDown(700);
+                        
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
                 }
@@ -55,7 +55,10 @@ $(document).ready(function() {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
                         boxIndex = $(obj).prev().index();
-                        //console.log(boxIndex);
+                        
+                        if ( 1 != boxIndex) $(obj).slideUp(700);
+                        $(obj).prev().slideDown(700);
+                        
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
                 }
@@ -63,7 +66,7 @@ $(document).ready(function() {
 
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
-                scrollTop: moveTop + 'px'
+                //scrollTop: moveTop + 'px'
             }, {
                 duration: 300, complete: function () {
                 }
@@ -103,9 +106,11 @@ $(document).ready(function() {
                 if ($(elmSelecter).next() != undefined) {
                     try{
                         moveTop = $(elmSelecter).next().offset().top;
-                        //$(elmSelecter).next().addClass('move'); //  휠 내렸을시 애니메이션 이벤트
                         boxIndex = $(obj).next().index();
-                        //console.log(boxIndex);
+                        
+                        if( boxCount != boxIndex  ) $(obj).slideUp(700);
+                        $(obj).next().slideDown(700);
+
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
                 }
@@ -114,7 +119,10 @@ $(document).ready(function() {
                     try{
                         moveTop = $(elmSelecter).prev().offset().top;
                         boxIndex = $(obj).prev().index();
-                        //console.log(boxIndex);
+                        
+                        if ( 1 != boxIndex) $(obj).slideUp(700);
+                        $(obj).prev().slideDown(700);
+
                         boxLoad(boxIndex, boxCount);
                     }catch(e){}
                 }
@@ -122,7 +130,7 @@ $(document).ready(function() {
 
             // 화면 이동 0.8초(800)
             $("html,body").stop().animate({
-                scrollTop: moveTop + 'px'
+                // scrollTop: moveTop + 'px'
             }, {
                 duration: 300, complete: function () {}
             });
