@@ -197,17 +197,6 @@ div.box:nth-child(1) .bottomLine a img:hover {
     border-radius: 50%;
 }
 
-/* backgroundImg */
-#backgroundImg {
-    position: absolute;
-    top:25%;
-    right: 1%;
-    width: 40%;
-    animation-name: fadeIn;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-    
-}
 
 /*********************************************************************
     BOX 1 CSS END
