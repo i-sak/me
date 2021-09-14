@@ -200,13 +200,13 @@ div.box:nth-child(1) .bottomLine a img:hover {
 /* backgroundImg */
 #backgroundImg {
     position: absolute;
-    opacity: 0;
     top:25%;
     right: 1%;
     width: 40%;
     animation-name: fadeIn;
-    animation-duration: 1.5s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
+    
 }
 
 /*********************************************************************
