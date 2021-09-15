@@ -422,6 +422,7 @@ div#box2hiddenDivParent {
     0%{opacity: 0.6;visibility:visible; }
     100%{opacity: 0; visibility: hidden;}
 }
+
 /******** X 버튼 시작 **********/
 /* X 버튼 */
 #closeButtonForBox2hiddenDivParent {
@@ -450,11 +451,30 @@ div#box2hiddenDivParent {
 }
 /******** X 버튼 끝 **********/
 
-div#box2HiddenContents {
+div.box2HiddenContents {
     position: absolute;
+    
+    background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
+    
+    display: inline-block;
+    width: 80%;
+    height: 80%;
+    
     top:10%;
-    left:20%;
+    left:10%;
+
     visibility: hidden;
+    z-index: 4;
+    color:white;
+}
+
+@keyframes visibilityOn2 {
+    0%{opacity: 0; visibility:visible;}
+    100%{opacity: 1; visibility:visible;}
+}
+@keyframes visibilityOff2 {
+    0%{opacity: 1;visibility:visible; }
+    100%{opacity: 0; visibility: hidden;}
 }
 
 

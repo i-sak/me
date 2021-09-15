@@ -167,7 +167,7 @@ $(document).ready(function() {
         if(i == 4) i = 1 ;
 
 
-     }, 4000);
+     }, 3000);
     
 
     
