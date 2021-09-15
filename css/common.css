@@ -12,7 +12,7 @@ div, p, h2, h3, h4, h5, h6 {margin: 0; padding : 0;}
 a,a:link,a:visited {text-decoration: none; color:white;}
 
 #nameTag {
-    z-index: inherit;
+    z-index: 5;
     position: fixed;
     color:white;
     font-weight: 600;
@@ -198,8 +198,10 @@ nav#navSpace > header > a > span:hover {
     color: whitesmoke;
 }
 #navSection ul {list-style: none; }
+#navSection ul li {margin-top: 5%;}
 #navSection ul li a {
     font-weight: bold ;
+    font-size: larger;
     transition: color 0.5s ;
 }
 #navSection ul li a:hover { color : teal; }

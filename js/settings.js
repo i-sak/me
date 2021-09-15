@@ -74,7 +74,7 @@ $(document).ready(function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800, complete: function () {
+                duration: 700, complete: function () {
                 }
             });
         }); // - end - mousewheel DOMMouseScroll
@@ -144,7 +144,7 @@ $(document).ready(function() {
             $("html,body").stop().animate({
                 scrollTop: moveTop + 'px'
             }, {
-                duration: 800, complete: function () {}
+                duration: 700, complete: function () {}
             });
         }); // - end - touchend
     }
@@ -167,7 +167,7 @@ $(document).ready(function() {
         if(i == 4) i = 1 ;
 
 
-     }, 5000);
+     }, 4000);
     
 
     

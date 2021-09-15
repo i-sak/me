@@ -36,7 +36,7 @@ function boxLoad(index, max) {
 
     switch (index) {
         //box 2
-        case 1 :             
+        case 1 :     
             return;
     }
 }
@@ -48,6 +48,8 @@ function clickBox2Aticle(idx) {
     console.log("clickBox2Aticle idx : " + idx)
     // box cover
     visibledBox2hiddenDivParent();
+
+    
 }
 // on
 function visibledBox2hiddenDivParent () {

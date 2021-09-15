@@ -9,10 +9,11 @@ div.box:nth-child(1) {
 div.box:nth-child(1) #title {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-style: italic;    
-    padding-top: 2%;
+    padding-top: 1%;
     position: absolute;
     width: 55%;
     z-index: 2;
+
     animation-name: fadeInHeader;
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
@@ -402,11 +403,14 @@ section#box2Section1 .box2colrow {
 /* hidden 박스 */
 div#box2hiddenDivParent {
     position: absolute;
+    
     width: 100%;
     height: 100%;
+
     z-index: 2s;
     background-color: black;
     opacity: 0.6;
+
     visibility: hidden;
     
 }
@@ -418,14 +422,18 @@ div#box2hiddenDivParent {
     0%{opacity: 0.6;visibility:visible; }
     100%{opacity: 0; visibility: hidden;}
 }
-
+/******** X 버튼 시작 **********/
 /* X 버튼 */
 #closeButtonForBox2hiddenDivParent {
     display: flex;
-    padding-top: 3%;
-    z-index: 3s;
+
     justify-content: center;
+    align-items: center;
+
+    padding-top: 3%;
+    z-index: 3;    
 }
+/* X 버튼 */ 
 #closeButtonForBox2hiddenDivParent a {
     text-align: center;
     display: flex;
@@ -440,18 +448,15 @@ div#box2hiddenDivParent {
     height :26px;
     filter: brightness(150%);
 }
+/******** X 버튼 끝 **********/
 
-#box2hiddenDivParent .hiddenDiv {
+div#box2HiddenContents {
+    position: absolute;
+    top:10%;
+    left:20%;
     visibility: hidden;
 }
-/*
-section#box2Section1 div#box2bar {
-    margin-left: 9%;
-    width: 1%;
-    background-color:  #302C4D;
-    height: 100%;
-}
-*/
+
 
 /*********************************************************************
     BOX 2 CSS END 
