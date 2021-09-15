@@ -330,52 +330,7 @@ section#box2Section1 article a {
     justify-content: center;
     align-items: center;
 }
-/*
-section#box2Section1 .box2colrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-*/
-/* colrow background 이미지  */
-/*
-#box2Section1 article:nth-child(1) .box2colrow:hover,
-#box2Section1 article:nth-child(2) .box2colrow:hover,
-#box2Section1 article:nth-child(3) .box2colrow:hover,
-#box2Section1 article:nth-child(4) .box2colrow:hover {
-    filter:brightness(150%); 
-}
 
-#box2Section1 article:nth-child(1) .box2colrow {    
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/programming.jpg");
-    background-size: cover;
-}
-#box2Section1 article:nth-child(2) .box2colrow {    
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/bloger.jpg");
-    background-size: cover;
-}
-#box2Section1 article:nth-child(3) .box2colrow {    
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/keyboard.jpg");
-    background-size: cover;
-    
-}
-#box2Section1 article:nth-child(4) .box2colrow {    
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.3),rgb(0,0,0,0.3) ),url("../img/jiujitsu.jpg");
-    background-size: cover;
-}
-*/
 #box2Section1 article {
     overflow: hidden;
     background-size: cover;
@@ -455,7 +410,7 @@ div#box2hiddenDivParent {
 /* hidden 데이터 처리 */
 div.box2HiddenContents {
     position: absolute;
-    
+    border-radius: 2%;
     background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
     
     display: flex;
