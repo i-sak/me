@@ -419,7 +419,6 @@ div.box2HiddenContents {
     align-items: center;
     flex-direction: column;
 
-
     width: 86%;
     height: 80%;
     
@@ -429,7 +428,7 @@ div.box2HiddenContents {
     visibility: hidden;
 
     z-index: 4;
-    color:white;
+    color:black;
 }
 @keyframes visibilityOn2 {
     0%{opacity: 0; visibility:visible;}
@@ -439,13 +438,32 @@ div.box2HiddenContents {
     0%{opacity: 1;visibility:visible; }
     100%{opacity: 0; visibility: hidden;}
 }
-
-div.box2HiddenContents div {
-    width: 90%;
-    margin: 1% 0;
-    background: linear-gradient(to right, rgb(22, 22, 22),rgb(48, 51, 35));
+div.box2HiddenContents div.hiddenContentLayout {
+    width: 98%;
+    height: 98%;
+    border-radius: 2%;
+    background-color: white;
+    display: flex;
 }
-div.box2HiddenContents div ul {list-style: none; padding-left: 3%;}
+div#box2HiddenContent1 > div.hiddenContentLayout > header { 
+    width: 35%;
+    text-align: center;
+}
+div#box2HiddenContent1 > div.hiddenContentLayout section {
+    background-color: aquamarine;
+}
+div#box2HiddenContent1 > div.hiddenContentLayout section div {
+    background-color: salmon;
+}
+div#imageBorder {
+    margin-top: 10%;
+    display: inline-block;
+    border-right: 3px solid rgb(8,22,78);
+}
+div#imageBorder img {
+    position: relative;
+    width: 100%;
+}
 /*********************************************************************
     BOX 2 CSS END 
 *********************************************************************/
