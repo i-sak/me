@@ -451,9 +451,17 @@ div#box2HiddenContent1 > div.hiddenContentLayout > header {
 }
 div#box2HiddenContent1 > div.hiddenContentLayout section {
     background-color: aquamarine;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 div#box2HiddenContent1 > div.hiddenContentLayout section div {
     background-color: salmon;
+    color:rgb(8,22,78);
+    font-size: small;
+    margin-bottom: 10px;
+    
 }
 div#imageBorder {
     margin-top: 10%;
