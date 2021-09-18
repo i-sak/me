@@ -164,7 +164,7 @@ $(document).ready(function() {
         }
         li.setAttribute("class","box1On");
 
-        if(i == 4) i = 1 ;
+        if(i == cnt+1) i = 1 ;
 
 
      }, 3000);

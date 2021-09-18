@@ -267,8 +267,6 @@ div.box:nth-child(1) .bottomLine a img:hover {
 *********************************************************************/
 div.box:nth-child(2) {
     display: flex;
-    text-align: center;
-
     flex-direction: column;
 }
 div.box:nth-child(2) > header {
@@ -278,12 +276,14 @@ div.box:nth-child(2) > header {
 div.box:nth-child(2) > header > div {
     margin-top: 50px;
     margin-bottom: 10px;
-    padding: 1% 1% 5% 1%;
+    
 
     width: 40%;
     
     /*background: linear-gradient(to left, midnightblue,white);*/
-    background-color: white;
+    
+    /*padding: 1% 1% 5% 1%;
+    background-color: white;*/
 }
 div.box:nth-child(2) > header > div > img {
     width: 100%;
@@ -292,22 +292,23 @@ div.box:nth-child(2) section {
     display: flex;
     width: 100%;
     flex-direction: column;
-    align-items: center;
+    align-items: left;
     padding-top: 10px;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/moon.jpg");
     background-size: cover;
-    padding-top: 5%;
+    
     padding-bottom: 5%;
+    padding-left: 10%;
 }
 div.box:nth-child(2) section h3 {
     color:rgb(101, 201, 201);
 }
-div.box:nth-child(2) section table {
-    text-align: left;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 70%;
+div.box:nth-child(2) section > div {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
 }
+
 /* box2 decoration */
 div#box2 > footer {
     position: absolute;
@@ -472,7 +473,7 @@ section#box3Section1 article a {
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/blog.png");
 }
 #box3Section1 article:nth-child(4) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/keyboard.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/github.png");
 }
 
 /* hidden 박스 */
@@ -613,6 +614,7 @@ div#box3HiddenContent3 > div.hiddenContentLayout > section iframe {
 /*hidden content 2, 3 end ***************/
 
 /*hidden content 4 start ***************/
+/** youtube 
 div#box3HiddenContent4 a {
     display: flex;
     justify-content: center;
@@ -626,6 +628,7 @@ div#box3HiddenContent4 a {
     border-radius: 10%;
     color:white;
 }
+**/
 /*hidden content 4 end ***************/
 
 /*********************************************************************

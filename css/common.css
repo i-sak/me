@@ -35,7 +35,8 @@ a,a:link,a:visited {text-decoration: none; color:white;}
 }
 /* box2 */
 .box:nth-child(2) {
-    background: linear-gradient( to right, rgb(12, 0, 34), rgb(86, 30, 160)) ;
+    /*background: linear-gradient( to right, rgb(12, 0, 34), rgb(86, 30, 160)) ;*/
+    background-color: black;
     /*background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;*/
     color : white;
 }
