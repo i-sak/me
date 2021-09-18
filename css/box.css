@@ -277,6 +277,7 @@ div.box:nth-child(2) > header {
 }
 div.box:nth-child(2) > header > div {
     margin-top: 50px;
+    margin-bottom: 10px;
     padding: 1% 1% 5% 1%;
 
     width: 40%;
@@ -294,11 +295,9 @@ div.box:nth-child(2) section {
     align-items: center;
     padding-top: 10px;
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/moon.jpg");
-    /*background: url("../img/moon.jpg"), -webkit-gradient(to right, rgb(0.0.0.0.3), rgb(0.0.0.0.3));*/
     background-size: cover;
-    /*
-    background-color: black ;
-    */
+    padding-top: 5%;
+    padding-bottom: 5%;
 }
 div.box:nth-child(2) section h3 {
     color:rgb(101, 201, 201);
@@ -444,12 +443,14 @@ section#box3Section1 article {
     background-size: cover;
 
     display: flex;
+
     justify-content: center;
     align-items: center;
 } /* 내용이 겹치는 부분이 있으니 체크할 것 */
 
 section#box3Section1 article a {
     display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     justify-content: center;
@@ -468,10 +469,10 @@ section#box3Section1 article a {
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/bloger.jpg");
 }
 #box3Section1 article:nth-child(3) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/keyboard.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/blog.png");
 }
 #box3Section1 article:nth-child(4) {    
-    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/jiujitsu.jpg");
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/keyboard.jpg");
 }
 
 /* hidden 박스 */
@@ -556,6 +557,7 @@ div.box3HiddenContents {
     0%{opacity: 1;visibility:visible; }
     100%{opacity: 0; visibility: hidden;}
 }
+
 div.box3HiddenContents div.hiddenContentLayout {
     width: 98%;
     height: 98%;
@@ -563,6 +565,7 @@ div.box3HiddenContents div.hiddenContentLayout {
     background-color: white;
     display: flex;
 }
+/*hidden content 1 start ***************/
 div#box3HiddenContent1 > div.hiddenContentLayout > header { 
     width: 35%;
     text-align: center;
@@ -573,7 +576,6 @@ div#box3HiddenContent1 > div.hiddenContentLayout section {
     padding-left: 10px;
     padding-right: 10px;
 }
-
 /*
 box3 에서 hidden 컨텐츠를 나타내는 영역입니다.
 */
@@ -595,6 +597,37 @@ div#imageBorder img {
     position: relative;
     width: 100%;
 }
+/*hidden content 1 end ***************/
+
+/*hidden content 2, 3 start ***************/
+div#box3HiddenContent2 > div.hiddenContentLayout > section,
+div#box3HiddenContent3 > div.hiddenContentLayout > section {
+    margin: 2%;
+    
+}
+div#box3HiddenContent2 > div.hiddenContentLayout > section iframe, 
+div#box3HiddenContent3 > div.hiddenContentLayout > section iframe {
+    width: 78vw;
+    height: 70vh;
+}
+/*hidden content 2, 3 end ***************/
+
+/*hidden content 4 start ***************/
+div#box3HiddenContent4 a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    width: 70px;
+    height: 50px;
+    
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 10%;
+    color:white;
+}
+/*hidden content 4 end ***************/
+
 /*********************************************************************
     BOX 3 CSS END 
 *********************************************************************/
