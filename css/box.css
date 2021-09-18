@@ -153,10 +153,10 @@ section#section1 span.light {
     display: inline-block;
     position: absolute;
     border-radius: 50%;
-    width : 4px;
-    height: 100px;
+    width : 3px;
+    height: 50px;
     opacity: 0.5;
-    z-index: 2;
+    z-index: 0;
     top:40%;
 }
 span.lt1 {
@@ -262,14 +262,132 @@ div.box:nth-child(1) .bottomLine a img:hover {
     BOX 1 CSS END
 *********************************************************************/
 
-
-
 /*********************************************************************
     BOX 2 CSS START
 *********************************************************************/
+div.box:nth-child(2) {
+    display: flex;
+    text-align: center;
+
+    flex-direction: column;
+}
+div.box:nth-child(2) > header {
+    display: flex;
+    justify-content: center;
+}
+div.box:nth-child(2) > header > div {
+    margin-top: 50px;
+    padding: 1% 1% 5% 1%;
+
+    width: 40%;
+    
+    /*background: linear-gradient(to left, midnightblue,white);*/
+    background-color: white;
+}
+div.box:nth-child(2) > header > div > img {
+    width: 100%;
+}
+div.box:nth-child(2) section {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 10px;
+    background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/moon.jpg");
+    /*background: url("../img/moon.jpg"), -webkit-gradient(to right, rgb(0.0.0.0.3), rgb(0.0.0.0.3));*/
+    background-size: cover;
+    /*
+    background-color: black ;
+    */
+}
+div.box:nth-child(2) section h3 {
+    color:rgb(101, 201, 201);
+}
+div.box:nth-child(2) section table {
+    text-align: left;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 70%;
+}
+/* box2 decoration */
+div#box2 > footer {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+div#box2 > footer span {
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    opacity: 0.6;
+}
+div#box2 > footer span:nth-child(1) {
+    background: linear-gradient(to top,black, white);
+    animation: planet1 25s linear infinite;
+}
+div#box2 > footer span:nth-child(2) {
+    background: linear-gradient(to top,rgb(15, 15, 59),rgb(182, 182, 255));
+    animation: planet1 17s linear infinite reverse;
+}
+div#box2 > footer span:nth-child(6) {
+    background: linear-gradient(to top,rgb(210, 12, 236), rgb(150, 33, 33));
+    animation: planet1 59s linear infinite reverse;
+}
+div#box2 > footer span:nth-child(3) {
+    background: linear-gradient(to top,rgb(184, 233, 71), rgb(71, 19, 131));
+    animation: planet2 10s linear infinite;
+}
+div#box2 > footer span:nth-child(4) {
+    background: linear-gradient(to top,rgb(33, 137, 223), rgb(136, 136, 136));
+    animation: planet2 13s linear infinite reverse;
+}
+div#box2 > footer span:nth-child(5) {
+    background: linear-gradient(to top,rgb(210, 12, 236), rgb(150, 33, 33));
+    animation: planet2 23s linear infinite reverse;
+}
+
+@keyframes planet1 {
+    0% { top:0%; left: 50%;}
+    5% { top:10%;left:40%;}
+    10% {top:20%; left:30%;}
+    15% {top:30% ; left: 20%;}
+    20% { top: 40%; left:10%; }
+    25% {top:50%; left:0%; width: 50px; height: 50px;}
+    50% {top:80%; width: 80px; height: 80px;}
+    75% {top:40%; left:80%; width: 50px; height: 50px;}
+    100%{top:0%; left:50%;}
+}
+@keyframes planet2 {
+    0% {top:50%; left:0%}
+    10% {top:53%; left:20%}
+    20% {top:55%;left:35%;}
+    30% {left:50%;}
+    40% {top:53%;left:65%;}
+    50% {top:50%;left:80%;}
+    60% {top:47%;left:65%;}
+    70% {top:43%;left:50%;}
+    80% {left:35%;}
+    90% {top:47%;left:20%}
+    100% {top:50%;left:0%}
+    
+
+}
+
+/*********************************************************************
+    BOX 2 CSS END
+*********************************************************************/
+
+/*********************************************************************
+    BOX 3 CSS START
+*********************************************************************/
 /* 두 번째 박스 */
 /* header */
-div.box:nth-child(2) > header#box2header {
+div.box:nth-child(3) > header#box3header {
     padding:0;
     margin:0;
     position: absolute;
@@ -280,7 +398,7 @@ div.box:nth-child(2) > header#box2header {
     animation-duration: 0.5s;
     
 }
-div.box:nth-child(2) > header div#title {
+div.box:nth-child(3) > header div#title {
     position: absolute;
     display: flex;   
     align-items: flex-end;
@@ -288,20 +406,20 @@ div.box:nth-child(2) > header div#title {
     width: 90%;
     margin-left: 10%;
 }
-div.box:nth-child(2) > header div#title > h3 {
+div.box:nth-child(3) > header div#title > h3 {
     background-color: rgb(31, 31, 31);
     padding : 1% 2%;
 }
-div.box:nth-child(2) > header div#title > h5 {
+div.box:nth-child(3) > header div#title > h5 {
     font-weight: 100;
     display: flexbox;
     padding-left: 20%;
     width: 86%;
 }
-div.box:nth-child(2) > header div#title > h5 > span {color:yellow;}
+div.box:nth-child(3) > header div#title > h5 > span {color:yellow;}
 
 /* 중앙 */
-section#box2Section1 {
+section#box3Section1 {
     
     margin: 0%;
     padding: 0%;
@@ -317,47 +435,47 @@ section#box2Section1 {
     animation: fadeIn 0.5s;
     transition : all ease 1s;
 }
-section#box2Section1 article {
+section#box3Section1 article {
     padding:0;
     margin: 0;
     width: 100%;
     height: 100%;
-}
-section#box2Section1 article a {
-    display: flex;
-    width: 100%;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-#box2Section1 article {
     overflow: hidden;
     background-size: cover;
 
     display: flex;
     justify-content: center;
     align-items: center;
+} /* 내용이 겹치는 부분이 있으니 체크할 것 */
+
+section#box3Section1 article a {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
-#box2Section1 article:hover {
+
+
+#box3Section1 article:hover {
     filter:brightness(150%); 
 }
 
-#box2Section1 article:nth-child(1) {    
+#box3Section1 article:nth-child(1) {    
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/programming.jpg");
 }
-#box2Section1 article:nth-child(2) {    
+#box3Section1 article:nth-child(2) {    
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/bloger.jpg");
 }
-#box2Section1 article:nth-child(3) {    
+#box3Section1 article:nth-child(3) {    
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/keyboard.jpg");
 }
-#box2Section1 article:nth-child(4) {    
+#box3Section1 article:nth-child(4) {    
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/jiujitsu.jpg");
 }
 
 /* hidden 박스 */
-div#box2hiddenDivParent {
+div#box3hiddenDivParent {
     position: absolute;
     
     width: 100%;
@@ -381,7 +499,7 @@ div#box2hiddenDivParent {
 
 /******** X 버튼 시작 **********/
 /* X 버튼 */
-#closeButtonForBox2hiddenDivParent {
+#closeButtonForBox3hiddenDivParent {
     display: flex;
 
     justify-content: center;
@@ -391,7 +509,7 @@ div#box2hiddenDivParent {
     z-index: 3;    
 }
 /* X 버튼 */ 
-#closeButtonForBox2hiddenDivParent a {
+#closeButtonForBox3hiddenDivParent a {
     text-align: center;
     display: flex;
     
@@ -408,7 +526,7 @@ div#box2hiddenDivParent {
 /******** X 버튼 끝 **********/
 
 /* hidden 데이터 처리 */
-div.box2HiddenContents {
+div.box3HiddenContents {
     position: absolute;
     border-radius: 2%;
     background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
@@ -438,18 +556,18 @@ div.box2HiddenContents {
     0%{opacity: 1;visibility:visible; }
     100%{opacity: 0; visibility: hidden;}
 }
-div.box2HiddenContents div.hiddenContentLayout {
+div.box3HiddenContents div.hiddenContentLayout {
     width: 98%;
     height: 98%;
     border-radius: 2%;
     background-color: white;
     display: flex;
 }
-div#box2HiddenContent1 > div.hiddenContentLayout > header { 
+div#box3HiddenContent1 > div.hiddenContentLayout > header { 
     width: 35%;
     text-align: center;
 }
-div#box2HiddenContent1 > div.hiddenContentLayout section {
+div#box3HiddenContent1 > div.hiddenContentLayout section {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -457,12 +575,12 @@ div#box2HiddenContent1 > div.hiddenContentLayout section {
 }
 
 /*
-box2 에서 hidden 컨텐츠를 나타내는 영역입니다.
+box3 에서 hidden 컨텐츠를 나타내는 영역입니다.
 */
-div#box2HiddenContent1 > div.hiddenContentLayout section div a {
+div#box3HiddenContent1 > div.hiddenContentLayout section div a {
     color:rgb(217,0,0);
 }
-div#box2HiddenContent1 > div.hiddenContentLayout section div {
+div#box3HiddenContent1 > div.hiddenContentLayout section div {
     color:rgb(8,22,78);
     font-size: small;
     margin-top: 10px;
@@ -478,5 +596,5 @@ div#imageBorder img {
     width: 100%;
 }
 /*********************************************************************
-    BOX 2 CSS END 
+    BOX 3 CSS END 
 *********************************************************************/

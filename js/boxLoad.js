@@ -44,34 +44,34 @@ function boxLoad(index, max) {
 // =======================================
 // box 2 event 
 // =======================================
-function clickBox2Aticle(idx) {
-    visibledBox2hiddenDivParent(idx);
-    var a = document.querySelector("#box2closeButtonA");
-    a.setAttribute( 'href', 'javascript:closeBox2hiddenDivParent('+ idx +')');
+function clickBox3Aticle(idx) {
+    visibledBox3hiddenDivParent(idx);
+    var a = document.querySelector("#box3closeButtonA");
+    a.setAttribute( 'href', 'javascript:closeBox3hiddenDivParent('+ idx +')');
 }
 // on
-function visibledBox2hiddenDivParent (idx) {
+function visibledBox3hiddenDivParent (idx) {
     // box cover
-    var box2hiddenDivParent = document.querySelector("div#box2hiddenDivParent");
-    box2hiddenDivParent.style.animation = "visibilityOn 0.3s forwards";
+    var box3hiddenDivParent = document.querySelector("div#box3hiddenDivParent");
+    box3hiddenDivParent.style.animation = "visibilityOn 0.3s forwards";
     // hidden Conteants
-    var hiddenId = "#box2HiddenContent"+idx;
-    var box2HiddenContents = document.querySelector(hiddenId);
-    box2HiddenContents.style.animation = "visibilityOn2 0.4s forwards";
+    var hiddenId = "#box3HiddenContent"+idx;
+    var box3HiddenContents = document.querySelector(hiddenId);
+    box3HiddenContents.style.animation = "visibilityOn2 0.4s forwards";
 }
 // off
-function closeBox2hiddenDivParent(idx) {
+function closeBox3hiddenDivParent(idx) {
     // hidden Conteants
     /*var box2HiddenContents = document.querySelectorAll(".box2HiddenContents");
     for(var i = 0 ; i < box2HiddenContents.length; i++) {
         box2HiddenContents[i].style.animation ='visibilityOff2 0.4s forwards'
     }*/
-    var hiddenId = "#box2HiddenContent"+idx;
-    var box2HiddenContents = document.querySelector(hiddenId);
-    box2HiddenContents.style.animation = "visibilityOff2 0.4s forwards";
+    var hiddenId = "#box3HiddenContent"+idx;
+    var box3HiddenContents = document.querySelector(hiddenId);
+    box3HiddenContents.style.animation = "visibilityOff2 0.4s forwards";
     
-    var box2hiddenDivParent = document.querySelector("div#box2hiddenDivParent");
-    box2hiddenDivParent.style.animation = 'visibilityOff 0.3s forwards'
+    var box3hiddenDivParent = document.querySelector("div#box3hiddenDivParent");
+    box3hiddenDivParent.style.animation = 'visibilityOff 0.3s forwards'
     
 }
 
