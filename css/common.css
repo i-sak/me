@@ -28,106 +28,27 @@ a,a:link,a:visited {text-decoration: none; color:white;}
     /*font-size:24pt;*/
 }
 
-/* box1 */
+/* box1 : home */
 .box:nth-child(1) { 
     background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;
     color : white;
 }
-/* box2 */
+/* box2 : about me */
 .box:nth-child(2) {
-    /*background: linear-gradient( to right, rgb(12, 0, 34), rgb(86, 30, 160)) ;*/
     background-color: black;
-    /*background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;*/
     color : white;
 }
 
-/*.box:nth-child(3) { background-color: var(--background-color); }*/
-
-@keyframes fadeIn {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-/* up button */
-#fixedUpIcon {
-    position: fixed;
-    display: flex;
-    justify-content: center;
-    
-    bottom : 1%;
-    right: 1%;
-    background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
-    
-    text-align: center;
-
-    width: 26px;
-    height: 26px;
-    border-radius: 50%;
-    border:1px solid white;
-}
-
-/* backgroundImg */
-.box:nth-child(1) aside #backgroundImg{
+div.indication {
     position: absolute;
-    bottom: 45%;
-    right: 5%;
-
-    width: 40%;
-    height:20%;
+    z-index: 5;
+    font-size: smaller;
+    bottom: 2%;
+    left: 2%;
+    color :white;
 }
 
-/* 데스크톱에 사용될 스타일 시트를 작성합니다. */    
-@media screen and (min-width: 769px) {
-    /* nav */
-    section#navSection {
-        width: 50%;
-        right: 0%;
-    }
-
-    /* box1 */
-    div.box:nth-child(1) section#section1 {
-        font-size: 150%;
-    }
-
-    div.box:nth-child(1) section#section2 {
-        font-size: xx-large;
-    }
-    
-    /* backgroundImg */
-    .box:nth-child(1) aside #backgroundImg {
-        
-        right: 2%;
-        width: 25%;
-    }
-    /* box2 */
-    div#box2 {
-        padding-top: 100px;
-        flex-direction: row;  
-    }
-    div#box2 > header > div {
-        height: 45%;
-
-    }
-    div#box2 section {
-        justify-content: center;
-        width: 100%;
-        height: 50%;
-    }
-    /* box3*/
-    div.box:nth-child(3) section#box3Section1 {
-        flex-direction: row;   
-    }
-    
-    /*section#box2Section1 .box2colrow*/
-    div.box:nth-child(3) section#box3Section1 article {
-        font-size: x-large;   
-    }
-
-    div#box3HiddenContent2 > div.hiddenContentLayout > section iframe {
-        
-    }
-    /*div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}*/
-}
-
+.box:nth-child(4) { background-color: var(--background-color); }
 /*********************************************************************
     COMMON CSS END
 *********************************************************************/
@@ -161,16 +82,6 @@ nav#navSpace {
 }
 nav.onNavSpace {animation: toLeftNavSpace 0.4s ease forwards;}
 nav.closeNavSpace {animation: toRightNavSpace 0.8s ease ;}
-@keyframes toLeftNavSpace {
-    0% {width: 0%}
-    100% { width: 70%}
-}
-@keyframes toRightNavSpace {
-    0% {width : 70% }
-    100% { width: 0%}
-}
-
-
 /*
     nav 기본 세팅 end
     X icon start
@@ -185,35 +96,12 @@ nav#navSpace > header > a > span {
 nav#navSpace > header > a > span:hover {
     transform: rotate( 180deg );
 }
-
 .closeNavSpaceChildren {
     animation: hideNavSpaceChildren .4s ease forwards;
 }
 .openNavSpaceChildren {
     animation: showNavSpaceChildren .9s ease;
 }
-@keyframes hideNavSpaceChildren {
-    0% {opacity: 1; }
-    100% {opacity: 0; visibility: hidden;}
-}
-@keyframes showNavSpaceChildren {
-    0% {opacity: 0; visibility: inherit; }
-    100% {opacity: 1; }
-}
-
-/* 모바일에 사용될 스타일 시트를 작성합니다. */    
-/* @media screen and (max-width: 768px) {
-
-        div.box:nth-child(1) section#section1 {
-            font-size: 70%;
-        }
-        div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
-    }
-    
-    @media screen and (min-width: 768px) {
-        div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
-    }*/
-    
 /*    nav section     */
 #navSection { 
     width: 100%;
@@ -232,5 +120,196 @@ nav#navSpace > header > a > span:hover {
 #navSection ul li a:hover { color : teal; }
 
 /*===========================================================
-    nav footer
+    NAV CSS END
+===========================================================*/
+
+
+
+/*===========================================================
+    데스크톱 화면 (모바일 스크린 외) 화면에서의 세팅 Start
+    데스크톱에 사용될 스타일 시트를 작성합니다.
+===========================================================*/  
+@media screen and (min-width: 769px) {
+    /* nav */
+    section#navSection {
+        width: 50%;
+        right: 0%;
+    }
+
+    /* box1 */
+    div.box:nth-child(1) section#section1 {
+        font-size: 150%;
+    }
+
+    div.box:nth-child(1) section#section2 {
+        font-size: xx-large;
+    }
+    
+    /* backgroundImg */
+    .box:nth-child(1) aside #backgroundImg {
+        
+        right: 2%;
+        width: 25%;
+    }
+    /* box2 */
+    div#box2 {
+        padding-top: 100px;
+        flex-direction: row;  
+    }
+    
+    /*div#box2 > header > div*/
+    div.box:nth-child(2) > header > div {
+        padding-top: 15%;
+        padding-left: 15%;
+
+    }
+    div#box2 section {
+        justify-content: center;
+        width: 100%;
+        height: 50%;
+    }
+    /* box3*/
+    div.box:nth-child(3) section#box3Section1 {
+        flex-direction: row;   
+    }
+    /*section#box2Section1 .box2colrow*/
+    div.box:nth-child(3) section#box3Section1 article {
+        font-size: x-large;   
+    }
+}
+/* 모바일에 사용될 스타일 시트를 작성합니다. */    
+/*
+@media screen and (max-width: 768px) {
+
+        div.box:nth-child(1) section#section1 {
+            font-size: 70%;
+        }
+        div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
+    }
+    
+    @media screen and (min-width: 768px) {
+        div#fixedMenu {position: fixed; z-index: 2; display: flex; top:1%; right: 2%;}
+    }
+}
+*/
+/*===========================================================
+    데스크톱 화면 (모바일 스크린 외) 화면에서의 세팅 End 
+===========================================================*/  
+
+
+
+
+/*===========================================================
+    Animation @Keyframes Start
+===========================================================*/
+/* 페이드 인으로 화면에 나타나기 */
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+/* 우측 상단 3단 메뉴 아이콘 클릭시 nav 영역 애니메이션 */
+@keyframes toLeftNavSpace {
+    0% {width: 0%}
+    100% { width: 70%}
+}
+@keyframes toRightNavSpace {
+    0% {width : 70% }
+    100% { width: 0%}
+}
+/* nav 영역의 Menu List 항목 보이기/숨기기 */
+@keyframes hideNavSpaceChildren {
+    0% {opacity: 1; }
+    100% {opacity: 0; visibility: hidden;}
+}
+@keyframes showNavSpaceChildren {
+    0% {opacity: 0; visibility: inherit; }
+    100% {opacity: 1; }
+}
+
+/* 최상단 Title이 왼쪽으로 밀려들어오면서 페이드인 되는 애니메이션 */
+@keyframes fadeInHeader {
+    0% { opacity:0; right: 0%;}
+    100% { opacity:1; right : 40%} 
+}
+/* Home Page의 동그라미의 무빙 애니메이션 */
+@keyframes movingC1 {
+    0% {top:50%}
+    25% {top:-15%; right:25%;}
+    50% {top:40%; right: 0%;}
+    75% {top:80%; right: 25%;}
+    100% {top:50%; right:50%;}
+}
+
+/* Home Page (Main) 에서 텍스트가 위로 올라오면서 페이드인 되는 애니메이션 */
+@keyframes fadeInMainText {
+    0% { opacity: 0; top:30%;}
+    100% { opacity: 1; top:20%;}
+}
+/* Home Page (Main) 에서 텍스트가 위로 올라오면서 페이드인 되는 애니메이션 2 */
+@keyframes fadeInMainText2 {
+    0% { opacity : 0; top : 70%}
+    100% { opacity : 1; top : 60%}
+}
+/* Home Page (Main) 에서 텍스트가 사라지고 나타나는 텍스트 영역의 애니메이션 */
+@keyframes toLeftText {
+    0% {left: 100px; opacity: 0; }
+    100% {left: 0; opacity: 1; }
+}
+@keyframes toLeftText2 {
+    0% {left: 0; opacity: 1;}
+    100% {left: -100px; opacity: 0; }
+}
+/* Home Page (Main) Bottom Line이 왼쪽에서 오른쪽으로 나타나는 애니메이션 */
+@keyframes fadeInbottomLine {
+    0% { opacity:0; left:-100%;}
+    100% { opacity:0.9; left:0%;} 
+}
+
+/* Study Page Hidden Box의 보이기/숨기기 처리 애니메이션 */
+@keyframes visibilityOn {
+    0%{opacity: 0; visibility:visible;}
+    100%{opacity: 0.6; visibility:visible;}
+}
+@keyframes visibilityOff {
+    0%{opacity: 0.6;visibility:visible; }
+    100%{opacity: 0; visibility: hidden;}
+}
+/* Study Page Hidden Box의 보이기/숨기기 처리 애니메이션 
+    -> 내부 텍스트 숨기기 */
+@keyframes visibilityOn2 {
+    0%{opacity: 0; visibility:visible;}
+    100%{opacity: 1; visibility:visible;}
+}
+@keyframes visibilityOff2 {
+    0%{opacity: 1;visibility:visible; }
+    100%{opacity: 0; visibility: hidden;}
+}
+/* About Me Page의 행성의 움직임을 나타낸 애니메이션 */
+@keyframes planet1 {
+    0% { top:0%; left: 50%;}
+    5% { top:10%;left:40%;}
+    10% {top:20%; left:30%;}
+    15% {top:30% ; left: 20%;}
+    20% { top: 40%; left:10%; }
+    25% {top:50%; left:0%; width: 50px; height: 50px;}
+    50% {top:80%; width: 80px; height: 80px;}
+    75% {top:40%; left:80%; width: 50px; height: 50px;}
+    100%{top:0%; left:50%;}
+}
+@keyframes planet2 {
+    0% {top:50%; left:0%}
+    10% {top:53%; left:20%}
+    20% {top:55%;left:35%;}
+    30% {left:50%;}
+    40% {top:53%;left:65%;}
+    50% {top:50%;left:80%;}
+    60% {top:47%;left:65%;}
+    70% {top:43%;left:50%;}
+    80% {left:35%;}
+    90% {top:47%;left:20%}
+    100% {top:50%;left:0%}
+}
+
+/*===========================================================
+    Animation @Keyframes End 
 ===========================================================*/

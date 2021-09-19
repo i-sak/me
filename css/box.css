@@ -1,10 +1,17 @@
 /*********************************************************************
-    BOX 1 CSS START
+    BOX COMMON style Start
+    Box들의 공통 style 적용 사항
 *********************************************************************/
-/* 첫 번째 박스 */
-div.box:nth-child(1) {
-    overflow: hidden;
-}
+/* 모든 박스는 화면에서 넘치는 부분은 숨긴다. */
+div.box { overflow: hidden; }
+/*********************************************************************
+    BOX COMMON style End
+*********************************************************************/
+
+
+/*********************************************************************
+    BOX 1 CSS Start
+*********************************************************************/
 /* 최상단 Title */
 div.box:nth-child(1) #title {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -21,10 +28,7 @@ div.box:nth-child(1) #title {
     animation-timing-function: ease-in-out;
     animation-fill-mode: forwards;
 }
-@keyframes fadeInHeader {
-    0% { opacity:0; right: 0%;}
-    100% { opacity:1; right : 40%} 
-}
+
 div.box:nth-child(1) #title p#name {
     border-bottom: 1px solid white;
 }
@@ -55,15 +59,8 @@ div.box:nth-child(1) section#section1 {
     animation-duration: 1.5s;
     animation-timing-function: ease-in-out;
 }
-@keyframes fadeInMainText {
-    0% { opacity: 0; top:30%;}
-    100% { opacity: 1; top:20%;}
-}
-div.box:nth-child(1) section#section1 h3 {
-    /*padding-top: 10%;   */
-    font-weight: 500;
-}
 
+div.box:nth-child(1) section#section1 h3 { font-weight: 500; }
 div.box:nth-child(1) #section1 span.circle {
     display: inline-block;
     position: absolute;
@@ -95,15 +92,6 @@ div.box:nth-child(1) span.c5 {
     background-color: black;
     animation: movingC1 6s ease 5s infinite;
 }
-
-@keyframes movingC1 {
-    0% {top:50%}
-    25% {top:-15%; right:25%;}
-    50% {top:40%; right: 0%;}
-    75% {top:80%; right: 25%;}
-    100% {top:50%; right:50%;}
-}
-
 /* 중간 section 2 */
 div.box:nth-child(1) section#section2 {
     left : 5%;
@@ -118,11 +106,6 @@ div.box:nth-child(1) section#section2 {
     z-index: 2;
     color : rgba(245, 245, 245, 0.8)
 }
-@keyframes fadeInMainText2 {
-    0% { opacity : 0; top : 70%}
-    100% { opacity : 1; top : 60%}
-}
-
 div.box:nth-child(1) section#section2 ul {
     display: flex;
     list-style: none;
@@ -138,51 +121,6 @@ div.box:nth-child(1) section#section2 ul li.box1On {
 }
 div.box:nth-child(1) section#section2 ul li.box1Off {
     animation: toLeftText2 1s forwards;
-}
-@keyframes toLeftText {
-    0% {left: 100px; opacity: 0; }
-    100% {left: 0; opacity: 1; }
-}
-@keyframes toLeftText2 {
-    0% {left: 0; opacity: 1;}
-    100% {left: -100px; opacity: 0; }
-}
-
-/* 꾸밈 decoration */
-section#section1 span.light {
-    display: inline-block;
-    position: absolute;
-    border-radius: 50%;
-    width : 3px;
-    height: 50px;
-    opacity: 0.5;
-    z-index: 0;
-    top:40%;
-}
-span.lt1 {
-    background: linear-gradient(to top, rgb(14, 75, 75), rgb(236, 255, 255));
-    
-    right: 50px;
-}
-span.lt2 {
-    background: linear-gradient(to top,rgb(15, 15, 59),rgb(182, 182, 255));
-    
-    left: 50px;
-}
-section#section1 span.lt3 {
-    background: linear-gradient(to top, white,black);
-    
-    right: 50px;
-}
-section#section1 span.lt4 {
-    background: linear-gradient(to top, midnightblue,white);
-    
-    right: 20px;
-}
-section#section1 span.lt5 {
-    background: linear-gradient(to top,black, white);
-    
-    right: 20%;
 }
 
 /* 바닥(꼬리말) 라인 - sns icon */
@@ -205,43 +143,28 @@ div.box:nth-child(1) .bottomLine {
     animation-duration: 1.5s;
     animation-fill-mode: forwards;
 }
-@keyframes fadeInbottomLine {
-    0% { opacity:0; left:-100%;}
-    100% { opacity:0.9; left:0%;} 
-}
-div.box:nth-child(1) .bottomLine a {
-    margin-top: 20%;
-    margin-bottom: 20%;
-    height: 60%;
-    
-    margin-right: 1%;
-    display: flex;
-    
-    align-items: center; /* 상하 */
 
-}
-
+/* Home Page (Main)에서 bottom Line의 로고이미지 style */
 div.box:nth-child(1) .bottomLine a img,
 div.box:nth-child(1) .bottomLine a svg { 
     position: relative;
     height: 80%;
-    
-    animation-name: fadeInLogo;
-    animation-duration: 1s;
-    
     opacity: 0.5;
     transition: opacity 0.3s;
-}
-@keyframes fadeInLogo {
-    0% { opacity:0; }
-    100% { opacity:0.5; } 
 }
 div.box:nth-child(1) .bottomLine a svg:hover,
 div.box:nth-child(1) .bottomLine a img:hover {
     opacity: 1;
 }
-
-/* box1DecorationCircle */
+div.box:nth-child(1) .bottomLine a {
+    margin-top: 20%;
+    margin-bottom: 20%;
+    height: 60%;
+    margin-right: 1%;
+    display: flex;
+    align-items: center; /* 상하 */
+}
+/* box1DecorationCircle 화면 꾸며주기 위한 큰 원 */
 #box1DecorationCircle {
     position: absolute;
     left: -300px;
@@ -256,14 +179,12 @@ div.box:nth-child(1) .bottomLine a img:hover {
     z-index: 1;
     border-radius: 50%;
 }
-
-
 /*********************************************************************
-    BOX 1 CSS END
+    BOX 1 CSS End
 *********************************************************************/
 
 /*********************************************************************
-    BOX 2 CSS START
+    BOX 2 CSS Start
 *********************************************************************/
 div.box:nth-child(2) {
     display: flex;
@@ -276,12 +197,8 @@ div.box:nth-child(2) > header {
 div.box:nth-child(2) > header > div {
     margin-top: 50px;
     margin-bottom: 10px;
-    
-
     width: 40%;
-    
-    /*background: linear-gradient(to left, midnightblue,white);*/
-    
+    /*background: linear-gradient(to left, midnightblue,white);*/    
     /*padding: 1% 1% 5% 1%;
     background-color: white;*/
 }
@@ -309,7 +226,7 @@ div.box:nth-child(2) section > div {
     flex-direction: column;
 }
 
-/* box2 decoration */
+/* box2 decoration : 행성처럼 비행하는 느낌의 원들에 대한 style */
 div#box2 > footer {
     position: absolute;
     top: 0%;
@@ -334,13 +251,9 @@ div#box2 > footer span:nth-child(2) {
     background: linear-gradient(to top,rgb(15, 15, 59),rgb(182, 182, 255));
     animation: planet1 17s linear infinite reverse;
 }
-div#box2 > footer span:nth-child(6) {
-    background: linear-gradient(to top,rgb(210, 12, 236), rgb(150, 33, 33));
-    animation: planet1 59s linear infinite reverse;
-}
 div#box2 > footer span:nth-child(3) {
     background: linear-gradient(to top,rgb(184, 233, 71), rgb(71, 19, 131));
-    animation: planet2 10s linear infinite;
+    animation: planet2 16s linear infinite;
 }
 div#box2 > footer span:nth-child(4) {
     background: linear-gradient(to top,rgb(33, 137, 223), rgb(136, 136, 136));
@@ -350,91 +263,39 @@ div#box2 > footer span:nth-child(5) {
     background: linear-gradient(to top,rgb(210, 12, 236), rgb(150, 33, 33));
     animation: planet2 23s linear infinite reverse;
 }
-
-@keyframes planet1 {
-    0% { top:0%; left: 50%;}
-    5% { top:10%;left:40%;}
-    10% {top:20%; left:30%;}
-    15% {top:30% ; left: 20%;}
-    20% { top: 40%; left:10%; }
-    25% {top:50%; left:0%; width: 50px; height: 50px;}
-    50% {top:80%; width: 80px; height: 80px;}
-    75% {top:40%; left:80%; width: 50px; height: 50px;}
-    100%{top:0%; left:50%;}
+div#box2 > footer span:nth-child(6) {
+    background: linear-gradient(to top,rgb(210, 12, 236), rgb(150, 33, 33));
+    animation: planet1 59s linear infinite reverse;
 }
-@keyframes planet2 {
-    0% {top:50%; left:0%}
-    10% {top:53%; left:20%}
-    20% {top:55%;left:35%;}
-    30% {left:50%;}
-    40% {top:53%;left:65%;}
-    50% {top:50%;left:80%;}
-    60% {top:47%;left:65%;}
-    70% {top:43%;left:50%;}
-    80% {left:35%;}
-    90% {top:47%;left:20%}
-    100% {top:50%;left:0%}
-    
-
+div#box2 > footer span:nth-child(7) {
+    background: linear-gradient(to left,rgb(218, 172, 24), rgb(76, 170, 177));
+    animation: planet1 37s linear infinite;
 }
-
+div#box2 > footer span:nth-child(8) {
+    background: linear-gradient(to right,rgb(218, 172, 24), rgb(76, 170, 177));
+    animation: planet2 37s linear infinite;
+}
 /*********************************************************************
-    BOX 2 CSS END
+    BOX 2 CSS End
 *********************************************************************/
 
 /*********************************************************************
-    BOX 3 CSS START
+    BOX 3 CSS Start
 *********************************************************************/
-/* 두 번째 박스 */
-/* header */
-div.box:nth-child(3) > header#box3header {
-    padding:0;
-    margin:0;
-    position: absolute;
-    height: 12%;
-    width: 100%;
-    
-    animation-name: fadeIn;
-    animation-duration: 0.5s;
-    
-}
-div.box:nth-child(3) > header div#title {
-    position: absolute;
-    display: flex;   
-    align-items: flex-end;
-    height: 100%;
-    width: 90%;
-    margin-left: 10%;
-}
-div.box:nth-child(3) > header div#title > h3 {
-    background-color: rgb(31, 31, 31);
-    padding : 1% 2%;
-}
-div.box:nth-child(3) > header div#title > h5 {
-    font-weight: 100;
-    display: flexbox;
-    padding-left: 20%;
-    width: 86%;
-}
-div.box:nth-child(3) > header div#title > h5 > span {color:yellow;}
-
-/* 중앙 */
+/* 중앙의 전체를 맡고 있음 */
 section#box3Section1 {
-    
     margin: 0%;
     padding: 0%;
-
     position: absolute;
-    
+
     display: flex;
     flex-direction: column;
-    
+
     width: 100%;
     height: 100%;
-
-    animation: fadeIn 0.5s;
-    transition : all ease 1s;
 }
+
+/* Study Page article 공통사항 적용 style */
 section#box3Section1 article {
     padding:0;
     margin: 0;
@@ -442,13 +303,10 @@ section#box3Section1 article {
     height: 100%;
     overflow: hidden;
     background-size: cover;
-
     display: flex;
-
     justify-content: center;
     align-items: center;
-} /* 내용이 겹치는 부분이 있으니 체크할 것 */
-
+}
 section#box3Section1 article a {
     display: flex;
     flex-direction: column;
@@ -457,12 +315,10 @@ section#box3Section1 article a {
     justify-content: center;
     align-items: center;
 }
-
-
+/* Study Page 어두운 이미지 배경과 hover 시 밝아지는 효과 */
 #box3Section1 article:hover {
     filter:brightness(150%); 
 }
-
 #box3Section1 article:nth-child(1) {    
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/programming.jpg");
 }
@@ -476,41 +332,26 @@ section#box3Section1 article a {
     background-image: -webkit-linear-gradient(rgb(0,0,0,0.5),rgb(0,0,0,0.5) ),url("../img/github.png");
 }
 
-/* hidden 박스 */
+/* hidden 박스를 위한 겉 테두리 영역 
+   black box로 뒤 화면 못 누르게 하는 화면 */
 div#box3hiddenDivParent {
     position: absolute;
-    
     width: 100%;
     height: 100%;
-
     z-index: 2s;
     background-color: black;
     opacity: 0.6;
-
     visibility: hidden;
-    
-}
-@keyframes visibilityOn {
-    0%{opacity: 0; visibility:visible;}
-    100%{opacity: 0.6; visibility:visible;}
-}
-@keyframes visibilityOff {
-    0%{opacity: 0.6;visibility:visible; }
-    100%{opacity: 0; visibility: hidden;}
 }
 
 /******** X 버튼 시작 **********/
-/* X 버튼 */
 #closeButtonForBox3hiddenDivParent {
     display: flex;
-
     justify-content: center;
     align-items: center;
-
     padding-top: 3%;
     z-index: 3;    
 }
-/* X 버튼 */ 
 #closeButtonForBox3hiddenDivParent a {
     text-align: center;
     display: flex;
@@ -527,38 +368,29 @@ div#box3hiddenDivParent {
 }
 /******** X 버튼 끝 **********/
 
-/* hidden 데이터 처리 */
+
+/*hidden content COMMON style Start ***************/
+div.box3HiddenContents > div.hiddenContentLayout > section { margin: 2%; }
+div.box3HiddenContents > div.hiddenContentLayout > section iframe { width: 78vw; height: 70vh; }
+div.box3HiddenContents > div.hiddenContentLayout > section a {color : red;}
+/* hidden 영역의 보라색 박스 */
 div.box3HiddenContents {
     position: absolute;
     border-radius: 2%;
     background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160));
-    
     display: flex;
-    
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     width: 86%;
     height: 80%;
-    
     top:12%;
     left:7%;
-
     visibility: hidden;
-
     z-index: 4;
     color:black;
 }
-@keyframes visibilityOn2 {
-    0%{opacity: 0; visibility:visible;}
-    100%{opacity: 1; visibility:visible;}
-}
-@keyframes visibilityOff2 {
-    0%{opacity: 1;visibility:visible; }
-    100%{opacity: 0; visibility: hidden;}
-}
-
+/* hidden 영역의 흰색 박스 : 실제 데이터가 입력되는 곳의 박스 */
 div.box3HiddenContents div.hiddenContentLayout {
     width: 98%;
     height: 98%;
@@ -566,12 +398,18 @@ div.box3HiddenContents div.hiddenContentLayout {
     background-color: white;
     display: flex;
 }
-/*hidden content 1 start ***************/
-div#box3HiddenContent1 > div.hiddenContentLayout > header { 
+div#box3HiddenContent1 div.hiddenContentLayout section div {
+    padding: 10px;
+}
+div#box3HiddenContent1 div.hiddenContentLayout section div h3 {
+    color:teal;
+}
+
+div#box3HiddenContent4 > div.hiddenContentLayout > header { 
     width: 35%;
     text-align: center;
 }
-div#box3HiddenContent1 > div.hiddenContentLayout section {
+div#box3HiddenContent4 > div.hiddenContentLayout section {
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 10px;
@@ -580,10 +418,10 @@ div#box3HiddenContent1 > div.hiddenContentLayout section {
 /*
 box3 에서 hidden 컨텐츠를 나타내는 영역입니다.
 */
-div#box3HiddenContent1 > div.hiddenContentLayout section div a {
+div#box3HiddenContent4 > div.hiddenContentLayout section div a {
     color:rgb(217,0,0);
 }
-div#box3HiddenContent1 > div.hiddenContentLayout section div {
+div#box3HiddenContent4 > div.hiddenContentLayout section div {
     color:rgb(8,22,78);
     font-size: small;
     margin-top: 10px;
@@ -598,20 +436,7 @@ div#imageBorder img {
     position: relative;
     width: 100%;
 }
-/*hidden content 1 end ***************/
 
-/*hidden content 2, 3 start ***************/
-div#box3HiddenContent2 > div.hiddenContentLayout > section,
-div#box3HiddenContent3 > div.hiddenContentLayout > section {
-    margin: 2%;
-    
-}
-div#box3HiddenContent2 > div.hiddenContentLayout > section iframe, 
-div#box3HiddenContent3 > div.hiddenContentLayout > section iframe {
-    width: 78vw;
-    height: 70vh;
-}
-/*hidden content 2, 3 end ***************/
 
 /*hidden content 4 start ***************/
 /** youtube 
