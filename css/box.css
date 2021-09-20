@@ -398,13 +398,9 @@ div.box3HiddenContents div.hiddenContentLayout {
     background-color: white;
     display: flex;
 }
-div#box3HiddenContent1 div.hiddenContentLayout section div {
-    padding: 10px;
-}
-div#box3HiddenContent1 div.hiddenContentLayout section div h3 {
-    color:teal;
-}
-
+div#box3HiddenContent1 div.hiddenContentLayout section {overflow-y: scroll;}
+div#box3HiddenContent1 div.hiddenContentLayout section div { padding: 10px; }
+div#box3HiddenContent1 div.hiddenContentLayout section div h3 {color:teal;}
 div#box3HiddenContent4 > div.hiddenContentLayout > header { 
     width: 35%;
     text-align: center;
