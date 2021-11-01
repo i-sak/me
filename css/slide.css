@@ -1,0 +1,26 @@
+div#box3 > section {
+    display: flex;
+    -webkit-display:flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    height: 80%;    
+}
+div#box3 > section > div.box3col {
+    width: 20%;
+    /* test */
+    color : white;
+    background-color: blueviolet;
+}
+div#box3 > a.arrowLeft {
+    position: absolute;
+    top : 40%;
+    left : 5%;
+    font-size: 32pt;
+}
+div#box3 > a.arrowRight {
+    position: absolute;
+    top : 40%;
+    right : 5%;
+    font-size: 32pt;
+}
