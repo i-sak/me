@@ -42,7 +42,7 @@ function boxLoad(index, max) {
 }
 
 // =======================================
-// box 2 event 
+// box 3 event 
 // =======================================
 function clickBox3Aticle(idx) {
     visibledBox3hiddenDivParent(idx);
