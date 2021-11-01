@@ -42,14 +42,17 @@ function boxLoad(index, max) {
 }
 
 // =======================================
-// box 3 event 
+// box 3? event 
 // =======================================
+/*
 function clickBox3Aticle(idx) {
     visibledBox3hiddenDivParent(idx);
     var a = document.querySelector("#box3closeButtonA");
     a.setAttribute( 'href', 'javascript:closeBox3hiddenDivParent('+ idx +')');
 }
+*/
 // on
+/*
 function visibledBox3hiddenDivParent (idx) {
     // box cover
     var box3hiddenDivParent = document.querySelector("div#box3hiddenDivParent");
@@ -59,19 +62,21 @@ function visibledBox3hiddenDivParent (idx) {
     var box3HiddenContents = document.querySelector(hiddenId);
     box3HiddenContents.style.animation = "visibilityOn2 0.4s forwards";
 }
+*/
 // off
-function closeBox3hiddenDivParent(idx) {
+
+//function closeBox3hiddenDivParent(idx) {
     // hidden Conteants
     /*var box2HiddenContents = document.querySelectorAll(".box2HiddenContents");
     for(var i = 0 ; i < box2HiddenContents.length; i++) {
         box2HiddenContents[i].style.animation ='visibilityOff2 0.4s forwards'
     }*/
+    /*
     var hiddenId = "#box3HiddenContent"+idx;
     var box3HiddenContents = document.querySelector(hiddenId);
     box3HiddenContents.style.animation = "visibilityOff2 0.4s forwards";
     
     var box3hiddenDivParent = document.querySelector("div#box3hiddenDivParent");
     box3hiddenDivParent.style.animation = 'visibilityOff 0.3s forwards'
-    
-}
-
+    */
+//}
