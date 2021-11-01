@@ -11,6 +11,9 @@ div#box3 > section {
     height: 70%;   
     padding-top: 10%; 
 }
+div#box3 > section > div.box3col div {
+    text-align: center;
+}
 div#box3 > section > div.box3col {
     padding: 0;
     margin: 0;
@@ -18,30 +21,45 @@ div#box3 > section > div.box3col {
     width: 20%;
     height: 100%;
     display: flex;
+    
+    
     /*
     color : white;
     */
     background-color: white;
     transition-property: width display;
-    transition-duration: 0.3s;
+    transition-duration: 0.2s;
 }
 div#box3 > section > div.box3col:nth-child(n+6) { /* n+6*/
     display: none;
 }
+
 div#box3 > a.arrowLeft {
     color: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;
     position: absolute;
-    top : 40%;
-    left : 5%;
+    top : 45%;
+    left : 3%;
     font-size: 40pt;
 }
 div#box3 > a.arrowRight {
     color: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;
     position: absolute;
-    top : 40%;
-    right : 5%;
+    top : 45%;
+    right : 3%;
     font-size: 40pt;
 }
-div#box3 > aside {
-    
+div#box3 > section > div.box3col img {
+    width: 70%;
+    border-radius: 50%;
+    border:2px solid var(--background-color);
+}
+div#box3 > section div#onProject {
+    background-color: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;
+}
+div#box3 > section div.box3col div:nth-child(1) {
+    margin-top: 5%;
+}
+div#box3 > section div#onProject img {
+    width : 50%;
+    border: 5px solid yellow;
 }
