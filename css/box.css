@@ -274,4 +274,10 @@ div#box2 > footer span:nth-child(8) {
 }
 /*********************************************************************
     BOX 2 CSS END
+    BOX 3 CSS START
 *********************************************************************/
+h3.titleProject {
+    color:white;
+    text-align: center;
+    padding-top: 30px;
+}
