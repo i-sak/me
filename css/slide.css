@@ -63,8 +63,8 @@ div#box3 > section div#onProject {
     background-color: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ;
 }
 
-div#box3 > section div#onProject div.subject {color: yellow;}
-div#box3 > section div#onProject div.tag {color: white;}
+div#box3 > section div#onProject div.subject {color: yellow; font-weight: bold;}
+div#box3 > section div#onProject div.tag {color: white; font-weight: bold;}
 div#box3 > section div.box3col div:nth-child(1) {
     margin-top: 5%;
 }
