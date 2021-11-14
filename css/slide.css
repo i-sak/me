@@ -22,8 +22,8 @@ div#box3 > section > div.box3col {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    /*justify-content: center;*/
+    /*justify-content: space-between;*/
+    justify-content: center;
 
     /*
     color : white;
@@ -56,9 +56,11 @@ div#box3 > a.arrowLeft:hover,
 div#box3 > a.arrowRight:hover {
     opacity: 1;
 }
+/* 슬라이드 이미지 사이즈  */
 div#box3 > section > div.box3col div img {
-    width: 5%;
-    height : 5%;
+    width: 100px;
+    height : 100px;
+    
     border-radius: 50%;
     border:2px solid var(--background-color);
 }
@@ -73,5 +75,5 @@ div#box3 > section div.box3col div:nth-child(1) {
 }
 div#box3 > section div#onProject img {
     
-    border: 7px solid yellow;
+    border: 5px solid yellow;
 }
