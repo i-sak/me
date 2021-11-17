@@ -45,6 +45,11 @@ a,a:link,a:visited {text-decoration: none; color:white;}
 .box:nth-child(4) {
      background: linear-gradient( to right, var(--background-color), rgb(86, 30, 160)) ; 
 }
+/* box3 : project */
+h3.titleProject {
+    margin-bottom: 30px;
+}
+
 /*********************************************************************
     COMMON CSS END
 *********************************************************************/
