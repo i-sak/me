@@ -24,7 +24,7 @@ function slideRight() {
     copyObj.style.width = '0';
     setTimeout(function() {
         copyObj.style.width = '20%';
-    }, 200);
+    }, 10);
     
     onProject(1);
 }
@@ -44,5 +44,5 @@ function onProject(d) {
     
     setTimeout(function() {
         onProject.style.width = '50%';
-    }, 205);
+    }, 10);
 }
